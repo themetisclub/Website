@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy · The Mētis Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-paper: #ECEBE7;
+        --x-ink: #2D5353;
+        --x-text: #2D5353;
+        --x-muted: #566C6A;
+        --x-rule: rgba(45, 83, 83, 0.14);
+        --x-rule-strong: rgba(45, 83, 83, 0.40);
+        --x-teal: #2D5353;
+        --x-sans: "Manrope", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+        --x-max: 1200px;
+        --x-gut: clamp(24px, 5.5vw, 64px);
+        color-scheme: light;
+      }
+      html, body { background: var(--x-paper); }
+      body { color: var(--x-text); font-family: var(--x-sans); font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; margin: 0; }
+      h1, h2 { color: var(--x-ink); text-wrap: balance; }
+      p, li { text-wrap: pretty; }
+      a { color: inherit; }
+      ::selection { background: var(--x-ink); color: var(--x-paper); }
+      :focus-visible { outline: 1px solid var(--x-ink); outline-offset: 3px; }
+
+      .x-page { display: block; max-width: none; padding: 0; gap: 0; }
+      .x-wrap { width: 100%; max-width: calc(var(--x-max) + 2 * var(--x-gut)); margin: 0 auto; padding-inline: var(--x-gut); box-sizing: border-box; }
+      .x-label { font-family: var(--x-sans); font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.5; }
+      .x-caps { font-family: var(--x-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.6; color: var(--x-muted); }
+
+      /* masthead */
+      .x-mast { position: sticky; top: 0; z-index: 50; background: var(--x-paper); border-bottom: 1px solid var(--x-rule); }
+      .x-mast__in { display: flex; justify-content: space-between; align-items: center; min-height: 64px; gap: 16px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--x-sans); font-weight: 600; font-size: 15px; letter-spacing: -0.02em; min-height: 44px; color: var(--x-ink); }
+      .x-brand img { height: 22px; width: auto; }
+      .x-mast__links { display: flex; justify-content: flex-end; align-items: center; gap: 32px; }
+      .x-mast__links a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1px; min-height: 44px; display: inline-flex; align-items: center; color: var(--x-text); transition: text-decoration-color 0.3s var(--x-ease), color 0.3s var(--x-ease); }
+      .x-mast__links a:hover { color: var(--x-ink); text-decoration-color: var(--x-ink); }
+
+      /* reading column */
+      @keyframes x-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+      .x-col { max-width: calc(680px + 2 * var(--x-gut)); margin: 0 auto; padding: clamp(64px, 9vw, 112px) var(--x-gut) 112px; box-sizing: border-box; animation: x-fade 600ms var(--x-ease) both; }
+      .x-col h1 { font-family: var(--x-sans); font-weight: 500; font-size: clamp(44px, 7vw, 72px); line-height: 1.0; letter-spacing: -0.04em; margin: 16px 0 20px; }
+      .x-updated { margin: 0 0 40px; }
+      .x-intro { font-size: 17px; line-height: 1.6; margin: 0 0 56px; }
+      .x-sections { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--x-rule); }
+      .x-sections li { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 20px; align-items: baseline; padding: 32px 0; border-top: 1px solid var(--x-rule); }
+      .x-num { font-size: 14px; line-height: 1.4; color: var(--x-muted); font-variant-numeric: tabular-nums; }
+      .x-sections h2 { font-family: var(--x-sans); font-weight: 500; font-size: 24px; line-height: 1.15; letter-spacing: -0.04em; margin: 0 0 10px; }
+      .x-sections p { font-size: 16px; line-height: 1.6; margin: 0; }
+      .x-sections a { color: var(--x-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: var(--x-rule-strong); display: inline-flex; align-items: center; min-height: 44px; margin-block: -11px; vertical-align: middle; }
+      .x-sections a:hover { text-decoration-color: var(--x-ink); }
+
+      /* footer band */
+      .x-foot { background: var(--x-teal); color: #ECEBE7; padding: clamp(72px, 10vw, 120px) 0 40px; text-align: center; }
+      .x-foot .x-wrap { max-width: 1240px; padding-inline: clamp(20px, 4vw, 48px); }
+      .x-foot :focus-visible { outline-color: #ECEBE7; }
+      .x-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; padding-block: 20px; border-block: 1px solid rgba(236, 235, 231, 0.2); margin-bottom: 28px; }
+      .x-foot nav a { text-decoration: none; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; opacity: 0.85; }
+      .x-foot nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot nav span { display: inline-flex; align-items: center; opacity: 0.4; }
+      .x-foot p { opacity: 0.8; margin: 0; }
+      .x-foot p + p { margin-top: 10px; opacity: 0.6; }
+      .x-foot a.x-mail { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+
+      @media (max-width: 520px) {
+        .x-sections li { grid-template-columns: 1fr; }
+        .x-num { padding-bottom: 8px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-page" id="top">
+      <header class="x-mast">
+        <div class="x-wrap x-mast__in">
+          <a class="x-brand" href="/" aria-label="The Mētis Club, home"><img src="knight.svg" alt="" /><span>The Mētis Club</span></a>
+          <nav class="x-mast__links x-label" aria-label="Site">
+            <a href="/">← Back to home</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main x-col">
+        <p class="x-caps">Policy</p>
+        <h1>Privacy Policy</h1>
+        <p class="x-updated x-caps">Last updated: 23 October 2026</p>
+        <p class="x-intro">The Mētis Club, operated by Shivam Shinde, Mumbai, Maharashtra, India, respects your privacy. This policy explains what we collect and how we use it.</p>
+
+        <ol class="x-sections">
+          <li><span class="x-num">01</span><div><h2>What we collect</h2><p>Your name, email address and WhatsApp number, and optionally your company website, what you sell and a short note about you, when you register for a workshop, join a waitlist, book a consulting session or buy a product. Basic usage data, such as pages visited.</p></div></li>
+          <li><span class="x-num">02</span><div><h2>Payments</h2><p>Payments are processed by Razorpay. We never see or store your full card, UPI or bank details. Razorpay's own privacy policy applies to payment data.</p></div></li>
+          <li><span class="x-num">03</span><div><h2>How we use it</h2><p>To deliver your purchase, send workshop details and updates, answer your questions, and improve our content. We'll only send marketing messages you can opt out of at any time.</p></div></li>
+          <li><span class="x-num">04</span><div><h2>Sharing</h2><p>We don't sell or rent your data. We share it only with the service providers we need to run the business: payments (Razorpay), form delivery (FormSubmit), hosting (Vercel) and our WhatsApp community, or when the law requires.</p></div></li>
+          <li><span class="x-num">05</span><div><h2>Cookies</h2><p>Our site may use cookies and similar tools for analytics and to measure our ads. You can turn cookies off in your browser.</p></div></li>
+          <li><span class="x-num">06</span><div><h2>Data retention</h2><p>We keep your information only as long as we need it for the purposes above, or as the law requires.</p></div></li>
+          <li><span class="x-num">07</span><div><h2>Your rights</h2><p>You can ask to see, correct, or delete your personal data at any time by emailing us.</p></div></li>
+          <li><span class="x-num">08</span><div><h2>Security</h2><p>We take reasonable steps to protect your information, but no method of transmission over the internet is completely secure.</p></div></li>
+          <li><span class="x-num">09</span><div><h2>Changes</h2><p>We may update this policy. The latest version will always be on this page.</p></div></li>
+          <li><span class="x-num">10</span><div><h2>Contact</h2><p>Email <a href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> with any privacy question.</p></div></li>
+        </ol>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <nav class="x-label" aria-label="Policies">
+            <a href="/pricing">Pricing</a><span aria-hidden="true">·</span>
+            <a href="/refund">Refund Policy</a><span aria-hidden="true">·</span>
+            <a href="/terms">Terms &amp; Conditions</a><span aria-hidden="true">·</span>
+            <a href="/privacy" aria-current="page">Privacy Policy</a><span aria-hidden="true">·</span>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p class="x-label"><a class="x-mail" href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> · Mumbai, India</p>
+          <p class="x-label">© 2026 The Mētis Club</p>
+        </div>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+  </body>
+</html>
