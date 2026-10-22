@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing — The Mētis Club</title>
+    <meta name="description" content="Pricing for The Mētis Club: one-time prices in Indian Rupees, paid securely through Razorpay." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-paper: #ECEBE7;
+        --x-surface: #F3F2EE;
+        --x-ink: #2D5353;
+        --x-text: #2D5353;
+        --x-muted: #566C6A;
+        --x-rule: rgba(45, 83, 83, 0.14);
+        --x-rule-strong: rgba(45, 83, 83, 0.40);
+        --x-teal: #2D5353;
+        --x-accent: #3D7470;
+        --x-sans: "Manrope", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+        --x-max: 1200px;
+        --x-gut: clamp(24px, 5.5vw, 64px);
+        color-scheme: light;
+      }
+      html { scroll-padding-top: 64px; }
+      body { background: var(--x-paper); color: var(--x-text); font-family: var(--x-sans); font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+      h1, h2, h3 { color: var(--x-ink); text-wrap: balance; }
+      p, li { text-wrap: pretty; }
+      a { color: inherit; }
+      ::selection { background: var(--x-ink); color: var(--x-paper); }
+      :focus-visible { outline: 1px solid var(--x-ink); outline-offset: 3px; }
+      .x-page { display: block; max-width: none; padding: 0; gap: 0; }
+
+      .x-label { font-family: var(--x-sans); font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.5; }
+      .x-caps { font-family: var(--x-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.6; color: var(--x-muted); }
+      .x-wrap { width: 100%; max-width: calc(var(--x-max) + 2 * var(--x-gut)); margin: 0 auto; padding-inline: var(--x-gut); box-sizing: border-box; }
+
+      /* masthead, as on the main site */
+      .x-mast { position: sticky; top: 0; z-index: 50; background: var(--x-paper); border-bottom: 1px solid var(--x-rule); }
+      .x-mast__in { display: flex; justify-content: space-between; align-items: center; min-height: 64px; gap: 16px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--x-sans); font-weight: 600; font-size: 15px; letter-spacing: -0.02em; min-height: 44px; color: var(--x-ink); }
+      .x-brand img { height: 22px; width: auto; }
+      .x-mast__links { display: flex; justify-content: flex-end; align-items: center; gap: 32px; }
+      .x-mast__links a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1px; min-height: 44px; display: inline-flex; align-items: center; color: var(--x-text); transition: text-decoration-color 0.3s var(--x-ease); }
+      .x-mast__links a:hover { color: var(--x-ink); text-decoration-color: var(--x-ink); }
+
+      /* pricing */
+      .x-pricing { padding-block: clamp(64px, 10vw, 128px) clamp(80px, 10vw, 128px); }
+      .x-h1 { margin: 20px 0 24px; font-family: var(--x-sans); font-weight: 500; font-size: clamp(48px, 7vw, 88px); line-height: 1.0; letter-spacing: -0.04em; color: var(--x-ink); }
+      .x-lede { max-width: 48ch; margin: 0 0 clamp(48px, 7vw, 80px); font-size: 17px; line-height: 1.6; color: var(--x-text); }
+      .x-offers { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--x-rule-strong); border-bottom: 1px solid var(--x-rule-strong); }
+      .x-offer { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; column-gap: clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(28px, 4vw, 44px) 0; }
+      .x-offer + .x-offer { border-top: 1px solid var(--x-rule); }
+      .x-offer__n { font-size: 14px; line-height: 1; color: var(--x-muted); }
+      .x-offer__name { margin: 0 0 10px; font-family: var(--x-sans); font-weight: 500; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.05; letter-spacing: -0.04em; color: var(--x-ink); }
+      .x-offer__desc { max-width: 56ch; margin: 0 0 16px; font-size: 16px; line-height: 1.6; }
+      .x-inc { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0; padding: 0; list-style: none; }
+      .x-inc li + li::before { content: "·"; padding: 0 10px; opacity: 0.6; }
+      .x-price { text-align: right; white-space: nowrap; }
+      .x-price__fig { display: block; font-family: var(--x-sans); font-weight: 500; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.04em; color: var(--x-ink); font-variant-numeric: lining-nums tabular-nums; }
+      .x-price .x-caps { display: block; margin-top: 8px; }
+      .x-note { max-width: 64ch; margin: 32px 0 0; font-size: 14px; line-height: 1.6; color: var(--x-muted); }
+      .x-note a { display: inline-flex; align-items: center; min-height: 44px; vertical-align: middle; text-underline-offset: 3px; text-decoration-thickness: 1px; color: var(--x-ink); }
+      .x-note a:hover { color: var(--x-accent); }
+
+      /* footer, as on the main site */
+      .x-foot { background: var(--x-teal); color: #ECEBE7; padding: clamp(72px, 10vw, 120px) 0 40px; text-align: center; }
+      .x-foot .x-wrap { max-width: 1240px; padding-inline: clamp(20px, 4vw, 48px); }
+      .x-foot :focus-visible { outline-color: #ECEBE7; }
+      .x-foot__brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-bottom: 56px; font-weight: 500; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; letter-spacing: -0.04em; text-decoration: none; }
+      .x-foot__brand img { height: 1.1em; width: auto; }
+      .x-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; padding-block: 20px; border-block: 1px solid rgba(236, 235, 231, 0.2); margin-bottom: 28px; }
+      .x-foot nav a { text-decoration: none; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; opacity: 0.85; }
+      .x-foot nav a:hover, .x-foot nav a[aria-current] { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot nav span { display: inline-flex; align-items: center; opacity: 0.4; }
+      .x-foot p { margin: 0; opacity: 0.8; }
+      .x-foot p + p { margin-top: 10px; opacity: 0.6; }
+      .x-foot a.x-mail { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+
+      @media (max-width: 640px) {
+        .x-offer { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+        .x-offer__n { display: none; }
+        .x-price { text-align: left; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-page" id="top">
+      <header class="x-mast">
+        <div class="x-wrap x-mast__in">
+          <a class="x-brand" href="/" aria-label="The Mētis Club, home"><img src="knight.svg" alt="" /><span>The Mētis Club</span></a>
+          <nav class="x-mast__links x-label" aria-label="Site">
+            <a href="/">← Back to home</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="x-wrap x-pricing" aria-labelledby="pricing-h">
+          <p class="x-caps">The Mētis Club</p>
+          <h1 class="x-h1" id="pricing-h">Pricing</h1>
+          <p class="x-lede">Simple, one-time prices in Indian Rupees. Payments are processed securely by Razorpay.</p>
+
+          <ol class="x-offers">
+            <li class="x-offer">
+              <span class="x-offer__n" aria-hidden="true">01</span>
+              <div>
+                <h2 class="x-offer__name">LinkedIn Outreach Workshop</h2>
+                <p class="x-offer__desc">A 40-minute live session on the full LinkedIn outreach system.</p>
+                <ul class="x-inc x-caps" aria-label="Included">
+                  <li>Live session</li><li>Q&amp;A</li><li>Invite via WhatsApp community</li>
+                </ul>
+              </div>
+              <p class="x-price"><span class="x-price__fig">Free</span></p>
+            </li>
+            <li class="x-offer">
+              <span class="x-offer__n" aria-hidden="true">02</span>
+              <div>
+                <h2 class="x-offer__name">The LinkedIn Outreach Playbook</h2>
+                <p class="x-offer__desc">The complete system, written down: frameworks, templates and SOPs.</p>
+                <ul class="x-inc x-caps" aria-label="Included">
+                  <li>Digital PDF</li><li>Lifetime access</li><li>Delivered by email</li>
+                </ul>
+              </div>
+              <p class="x-price"><span class="x-price__fig">₹999</span><span class="x-caps">one-time</span></p>
+            </li>
+            <li class="x-offer">
+              <span class="x-offer__n" aria-hidden="true">03</span>
+              <div>
+                <h2 class="x-offer__name">1:1 Outreach Consulting</h2>
+                <p class="x-offer__desc">A one-hour video call to work through your ICP, signals, messaging and follow-ups.</p>
+                <ul class="x-inc x-caps" aria-label="Included">
+                  <li>60-minute video call</li><li>Personalised recommendations</li><li>Session notes by email</li>
+                </ul>
+              </div>
+              <p class="x-price"><span class="x-price__fig">₹4,499</span><span class="x-caps">per 1-hour session</span></p>
+            </li>
+          </ol>
+
+          <p class="x-note">All prices are in INR. Digital products are delivered by email. Consulting sessions are scheduled by email after payment. See our <a href="/refund">Refund Policy</a> and <a href="/terms">Terms &amp; Conditions</a>.</p>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <a class="x-foot__brand" href="/" aria-label="The Mētis Club, home"><span>The Mētis Club</span></a>
+          <nav class="x-label" aria-label="Policies">
+            <a href="/pricing" aria-current="page">Pricing</a><span aria-hidden="true">·</span>
+            <a href="/refund">Refund Policy</a><span aria-hidden="true">·</span>
+            <a href="/terms">Terms &amp; Conditions</a><span aria-hidden="true">·</span>
+            <a href="/privacy">Privacy Policy</a><span aria-hidden="true">·</span>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p class="x-label"><a class="x-mail" href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> · Mumbai, India</p>
+          <p class="x-label">© 2026 The Mētis Club</p>
+        </div>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+  </body>
+</html>
