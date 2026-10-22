@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms &amp; Conditions · The Mētis Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-paper: #ECEBE7;
+        --x-ink: #2D5353;
+        --x-text: #2D5353;
+        --x-muted: #566C6A;
+        --x-rule: rgba(45, 83, 83, 0.14);
+        --x-rule-strong: rgba(45, 83, 83, 0.40);
+        --x-teal: #2D5353;
+        --x-sans: "Manrope", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+        --x-max: 1200px;
+        --x-gut: clamp(24px, 5.5vw, 64px);
+        color-scheme: light;
+      }
+      html, body { background: var(--x-paper); }
+      body { color: var(--x-text); font-family: var(--x-sans); font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+      h1, h2, h3 { color: var(--x-ink); text-wrap: balance; }
+      p, li { text-wrap: pretty; }
+      a { color: inherit; }
+      ::selection { background: var(--x-ink); color: var(--x-paper); }
+      :focus-visible { outline: 1px solid var(--x-ink); outline-offset: 3px; }
+      .x-page { display: block; max-width: none; padding: 0; gap: 0; }
+      .x-label { font-family: var(--x-sans); font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.5; }
+      .x-caps { font-family: var(--x-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.6; color: var(--x-muted); }
+      .x-wrap { width: 100%; max-width: calc(var(--x-max) + 2 * var(--x-gut)); margin: 0 auto; padding-inline: var(--x-gut); box-sizing: border-box; }
+      /* masthead: paper, one hairline */
+      .x-mast { position: sticky; top: 0; z-index: 50; background: var(--x-paper); border-bottom: 1px solid var(--x-rule); }
+      .x-mast__in { display: flex; justify-content: space-between; align-items: center; min-height: 64px; gap: 16px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--x-sans); font-weight: 600; font-size: 15px; letter-spacing: -0.02em; min-height: 44px; color: var(--x-ink); }
+      .x-brand svg { height: 22px; width: auto; flex: none; }
+      .x-mast__links { display: flex; justify-content: flex-end; align-items: center; gap: 32px; }
+      .x-mast__links a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1px; min-height: 44px; display: inline-flex; align-items: center; color: var(--x-text); transition: text-decoration-color 0.3s var(--x-ease), color 0.3s var(--x-ease); }
+      .x-mast__links a:hover { color: var(--x-ink); text-decoration-color: var(--x-ink); }
+      /* reading column */
+      .x-col { max-width: 680px; margin: 0 auto; padding: clamp(64px, 10vw, 112px) 24px clamp(80px, 10vw, 112px); box-sizing: content-box; }
+      .x-col h1 { font-family: var(--x-sans); font-weight: 500; font-size: clamp(44px, 7vw, 72px); line-height: 1.0; letter-spacing: -0.04em; margin: 0 0 24px; }
+      .x-updated { margin: 0 0 32px; }
+      .x-intro { font-size: 17px; line-height: 1.65; margin: 0 0 56px; }
+      .x-terms { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--x-rule); }
+      .x-terms li { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 20px; align-items: baseline; padding: 28px 0; border-top: 1px solid var(--x-rule); }
+      .x-num { font-size: 14px; line-height: 1.4; color: var(--x-muted); font-variant-numeric: tabular-nums; }
+      .x-terms h2 { font-family: var(--x-sans); font-weight: 500; font-size: 24px; line-height: 1.05; letter-spacing: -0.04em; margin: 0 0 12px; }
+      .x-terms p { margin: 0; font-size: 16px; line-height: 1.65; }
+      .x-terms a { color: var(--x-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: var(--x-rule-strong); transition: text-decoration-color 0.3s var(--x-ease); padding-block: 12px; }
+      .x-terms a:hover { text-decoration-color: var(--x-ink); }
+      @keyframes x-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+      .x-in { animation: x-fade 600ms var(--x-ease) both; }
+      /* footer: the teal band */
+      .x-foot { background: var(--x-teal); color: #ECEBE7; padding: clamp(72px, 10vw, 120px) 0 40px; text-align: center; }
+      .x-foot .x-wrap { max-width: 1240px; padding-inline: clamp(20px, 4vw, 48px); }
+      .x-foot :focus-visible { outline-color: #ECEBE7; }
+      .x-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; padding-block: 20px; border-block: 1px solid rgba(236, 235, 231, 0.2); margin-bottom: 28px; }
+      .x-foot nav a { text-decoration: none; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; opacity: 0.85; }
+      .x-foot nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot nav span { display: inline-flex; align-items: center; opacity: 0.4; }
+      .x-foot p { margin: 0; opacity: 0.8; }
+      .x-foot p + p { margin-top: 10px; opacity: 0.6; }
+      .x-foot a.x-mail { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+      html { scroll-padding-top: 64px; }
+      @media (max-width: 560px) {
+        .x-mast__links { gap: 14px; }
+        .x-terms li { grid-template-columns: 28px minmax(0, 1fr); column-gap: 12px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-page" id="top">
+      <header class="x-mast">
+        <div class="x-wrap x-mast__in">
+        <a class="x-brand" href="#top" aria-label="The Mētis Club, back to top">
+          <svg viewBox="0 0 324 469" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M307.087 418.687C305.365 429.899 295.616 443.219 283.81 443.219H54.3044C41.2863 443.219 30.7314 427.007 30.7314 415.302V415.291C30.7314 414.792 30.7766 414.274 30.8147 413.76C11.4502 419.498 0 426.551 0 434.182C0 453.415 72.5318 469.003 162.006 469.003C251.477 469.003 324.009 453.415 324.009 434.182C324.009 428.614 317.898 423.356 307.087 418.687Z" fill="#ECEBE7"/>
+<path d="M248.177 319.03C297.956 336.292 306.532 313.114 306.915 296.514C307.056 290.483 303.836 285.182 299.03 281.788C295.358 279.201 292.89 270.865 300.787 246.291C314.824 202.614 315.495 149.19 315.495 149.19C315.495 59.0172 262.749 43.6716 262.749 43.6716C265.772 30.9087 266.723 14.2263 257.578 0C257.578 0 239.965 10.273 238.865 25.1189C238.865 25.1189 176.122 -1.00136e-05 136.494 25.1189L143.097 45.6685C143.097 45.6685 116.68 76.4903 83.6563 100.465C50.6328 124.444 53.9362 119.876 52.8336 132.432C51.7345 144.993 73.7493 170.107 86.9572 173.532C92.3144 174.924 105.644 170.168 120.841 165.085C126.885 163.063 133.36 164.429 138.589 168.161C143.317 171.54 149.02 173.531 155.206 173.531C165.899 173.531 175.194 167.625 180.428 158.836L180.523 158.861V169.365C180.523 178.029 175.304 185.835 167.402 188.634C139.848 198.392 78.4843 231.598 78.167 333.723H258.892C256.957 331.953 252.101 327.037 248.177 319.03ZM149.118 22.497C160.808 19.1589 186.58 15.0585 227.801 25.1897C227.801 25.1897 174.442 32.4066 178.771 41.5442C178.771 41.5442 162.419 38.66 147.992 44.4285L143.99 32.1141C142.662 28.0279 144.991 23.6767 149.118 22.497ZM146.021 77.3076C146.021 77.3076 131.142 75.7786 122.265 79.1228L123.224 82.6328C128.14 81.6091 136.182 85.2707 137.408 85.8495C140.256 86.618 142.842 87.5381 144.54 88.6283C144.54 88.6283 119.225 88.4059 80.5895 120.827C80.5895 120.827 86.1391 141.033 73.4808 142.148C73.4808 142.148 67.2655 124.826 63.2662 140.147C59.2695 155.472 78.8105 167.252 78.8105 167.252C78.8105 167.252 54.9964 155.467 56.2532 133.02C55.9013 133.844 55.717 134.372 55.717 134.372C52.6085 128.377 57.7166 121.714 57.7166 121.714C72.1494 111.28 107.236 83.7462 115.229 77.5283C123.224 71.3104 143.618 49.1014 143.618 49.1014C145.424 48.5705 146.925 48.3365 148.281 48.239L148.295 48.184C148.295 48.184 168.078 43.7761 180.736 51.547C180.736 51.547 176.812 71.5338 146.021 77.3076ZM227.802 170.849C198.339 230.975 208.489 321.168 208.489 321.168H200.623H91.7489H87.5359C87.5359 245.701 141.878 210.507 169.049 197.626C178.306 193.239 184.145 183.848 184.145 173.606V155.095C200.146 141.312 185.708 108.216 185.708 108.216C185.708 108.216 257.266 110.722 227.802 170.849ZM237.365 292.454C234.55 283.523 237.229 273.057 239.912 264.341C246.548 236.462 269.9 200.42 282.101 164.694C285.922 149.164 287.367 133.256 285.206 116.577C284.04 107.557 282.222 99.1771 279.026 91.2024C272.725 78.3367 264.525 68.4084 258.323 62.0132C254.851 59.4481 249.859 57.0415 247.148 53.7327C249.27 54.7724 251.248 55.9034 253.201 57.0486C250.809 54.8841 249.303 53.7327 249.303 53.7327C344.693 90.0465 291.452 221.692 280.595 249.151C272.687 269.151 280.499 279.328 285.328 283.383C287.593 285.284 289.065 287.956 289.37 290.897C290.363 300.511 289.435 318.944 265.687 310.436C261.165 309.414 256.801 308.044 252.814 306.379C246.275 303.649 239.601 299.559 237.365 292.454Z" fill="#2D5353"/>
+<path d="M148.295 48.1807L148.281 48.2357C165.064 47.0302 149.085 76.4711 142.097 74.413C134.548 72.1944 121.891 77.7466 121.891 77.7466L122.266 79.1187C131.143 75.7744 146.021 77.3034 146.021 77.3034C176.813 71.5287 180.736 51.5437 180.736 51.5437C168.078 43.7729 148.295 48.1807 148.295 48.1807Z" fill="url(#k0)"/>
+<path d="M76.8133 119.713C81.9197 130.374 71.4827 129.042 71.4827 129.042C71.4827 129.042 76.8133 128.15 68.8174 123.934C62.338 120.513 57.7554 129.492 56.2522 133.017C54.9953 155.463 78.8094 167.248 78.8094 167.248C78.8094 167.248 59.2676 155.468 63.2651 140.143C67.2644 124.823 73.4797 142.145 73.4797 142.145C86.138 141.03 80.5883 120.823 80.5883 120.823C119.224 88.4021 144.539 88.6245 144.539 88.6245C142.841 87.5342 140.255 86.6133 137.407 85.8457C137.51 85.8945 137.656 85.9628 137.656 85.9628C113.452 85.0737 76.8133 119.713 76.8133 119.713Z" fill="url(#k1)"/>
+<path d="M30.7312 415.296C30.7312 427.001 41.2861 443.213 54.3042 443.213H283.81C295.615 443.213 305.365 429.892 307.087 418.681C307.264 417.527 307.385 416.388 307.385 415.296V415.285C307.385 403.581 296.83 387.373 283.809 387.373H271.483C278.327 384.665 283.109 378.528 283.109 371.372V371.367C283.109 361.715 274.408 353.893 263.671 353.893H239.952C255.558 353.893 268.205 351.477 268.205 337.448V333.721H258.889H78.1644H69.9044V337.448C69.9044 351.477 82.5547 353.893 98.1575 353.893H74.4381C63.7015 353.893 55.0009 361.714 55.0009 371.367V371.372C55.0009 378.528 59.7838 384.665 66.6266 387.373H54.3015C41.8392 387.373 31.6601 402.217 30.8118 413.754C30.7746 414.268 30.7285 414.786 30.7285 415.285V415.296H30.7312ZM88.9641 348.73C82.3047 348.73 76.9067 342.89 76.8961 335.688H227.8C227.792 342.89 222.394 348.73 215.735 348.73H88.9641ZM60.5292 368.503C60.5292 362.959 63.9967 358.254 68.8691 356.359C70.2146 355.777 71.6957 355.447 73.2549 355.447H73.5828H189.549H210.718C217.927 355.447 223.771 361.291 223.771 368.503C223.771 375.714 217.927 381.559 210.718 381.559H73.5828C66.374 381.559 60.5292 375.714 60.5292 368.503ZM41.4749 409.088C41.4749 397.701 50.7082 388.467 62.0981 388.467H233.976C245.365 388.467 254.598 397.701 254.598 409.088C254.598 420.48 245.365 429.713 233.976 429.713H62.0981C50.7082 429.714 41.4749 420.48 41.4749 409.088Z" fill="url(#k2)"/>
+<path d="M62.0988 429.714H233.977C245.366 429.714 254.599 420.481 254.599 409.089C254.599 397.702 245.366 388.469 233.977 388.469H62.0988C50.7089 388.469 41.4756 397.702 41.4756 409.089C41.4756 420.481 50.7089 429.714 62.0988 429.714ZM46.4153 406.103C46.4153 400.165 49.7526 395.062 54.617 392.399C56.3773 391.161 58.5117 390.42 60.8277 390.42H62.0988H151.051H192.806C201.467 390.42 208.489 397.439 208.489 406.103C208.489 414.761 201.467 421.787 192.806 421.787H62.0988C53.4371 421.787 46.4153 414.762 46.4153 406.103Z" fill="#ECEBE7"/>
+<path d="M62.0985 421.781H192.805C201.467 421.781 208.489 414.756 208.489 406.097C208.489 397.433 201.467 390.414 192.805 390.414H151.05C157.029 390.414 161.877 395.261 161.877 401.236C161.877 407.217 157.028 412.063 151.05 412.063H60.8274C54.8489 412.063 50.003 407.216 50.003 401.236C50.003 397.575 51.8335 394.352 54.6167 392.393C49.7532 395.056 46.415 400.16 46.415 406.097C46.415 414.756 53.4368 421.781 62.0985 421.781Z" fill="url(#k3)"/>
+<path d="M50.0029 401.236C50.0029 407.217 54.8496 412.063 60.8273 412.063H151.05C157.029 412.063 161.877 407.216 161.877 401.236C161.877 395.26 157.028 390.414 151.05 390.414H62.0984H60.8273C58.5112 390.414 56.3769 391.155 54.6166 392.393C51.8325 394.352 50.0029 397.574 50.0029 401.236Z" fill="#ECEBE7"/>
+<path d="M210.718 381.562C217.927 381.562 223.772 375.717 223.772 368.505C223.772 361.294 217.927 355.449 210.718 355.449H189.55C195.664 355.449 200.621 360.407 200.621 366.524C200.621 372.636 195.664 377.593 189.55 377.593H73.255C67.1399 377.593 62.1859 372.636 62.1859 366.524C62.1859 361.968 64.939 358.062 68.8692 356.361C63.9968 358.256 60.5293 362.962 60.5293 368.505C60.5293 375.717 66.3741 381.562 73.5829 381.562H210.718Z" fill="#ECEBE7"/>
+<path d="M62.1865 366.524C62.1865 372.636 67.1405 377.593 73.2556 377.593H189.55C195.664 377.593 200.622 372.636 200.622 366.524C200.622 360.407 195.664 355.449 189.55 355.449H73.5835H73.2556C71.6956 355.449 70.2153 355.78 68.8698 356.361C64.9405 358.062 62.1865 361.968 62.1865 366.524ZM67.6883 365.409C67.6883 361.168 71.1274 357.729 75.3713 357.729H143.932C148.175 357.729 151.614 361.168 151.614 365.409V367.633C151.614 371.88 148.175 375.319 143.932 375.319H75.3713C71.1274 375.319 67.6883 371.88 67.6883 367.633V365.409Z" fill="url(#k4)"/>
+<path d="M75.3715 375.315H143.932C148.176 375.315 151.615 371.875 151.615 367.629V365.405C151.615 361.164 148.176 357.725 143.932 357.725H75.3715C71.1276 357.725 67.6885 361.164 67.6885 365.405V367.629C67.6885 371.875 71.1276 375.315 75.3715 375.315Z" fill="#ECEBE7"/>
+<path d="M227.801 335.693H76.8975C76.9081 342.895 82.3061 348.735 88.9654 348.735H215.736C222.394 348.735 227.793 342.895 227.801 335.693Z" fill="#ECEBE7"/>
+<path d="M270.305 248.274C262.397 268.551 270.209 278.874 275.035 282.984C277.302 284.91 278.775 287.618 279.078 290.604C279.761 297.28 279.536 308.159 271.698 311.577C269.669 311.28 267.668 310.878 265.687 310.429C289.435 318.938 290.364 300.506 289.37 290.89C289.065 287.95 287.593 285.278 285.329 283.377C280.5 279.322 272.688 269.145 280.595 249.145C291.453 221.686 344.693 90.0412 249.304 53.7266C249.304 53.7266 250.81 54.8788 253.202 57.0424C328.617 101.25 280.569 221.946 270.305 248.274Z" fill="url(#k5)"/>
+<path d="M271.355 195.909C275.847 185.605 279.505 175.229 282.1 164.686C269.898 200.412 246.547 236.453 239.911 264.332C239.994 264.061 240.077 263.777 240.16 263.509C247.543 239.797 261.472 218.576 271.355 195.909Z" fill="url(#k6)"/>
+<path d="M265.686 310.428C267.666 310.876 269.668 311.278 271.697 311.576C279.536 308.157 279.76 297.278 279.077 290.602C278.774 287.616 277.301 284.908 275.034 282.982C270.208 278.872 262.397 268.549 270.303 248.272C280.567 221.944 328.616 101.248 253.2 57.0424C251.246 55.8973 249.269 54.7663 247.146 53.7266C249.857 57.0354 254.85 59.4419 258.321 62.0071C258.594 62.2101 258.923 62.4077 259.176 62.6125C264.279 66.758 267.875 71.6898 271.558 77.1259C274.659 81.7023 277.092 86.3761 279.024 91.1971C282.22 99.1718 284.038 107.551 285.205 116.572C287.364 133.252 285.92 149.16 282.099 164.689C279.505 175.232 275.847 185.608 271.354 195.912C261.471 218.58 247.542 239.801 240.16 263.512C240.076 263.779 239.994 264.064 239.91 264.336C237.227 273.051 234.549 283.518 237.363 292.449C239.599 299.554 246.274 303.644 252.812 306.372C256.8 308.036 261.165 309.405 265.686 310.428Z" fill="#ECEBE7"/>
+<path d="M147.991 44.428C162.419 38.6586 178.77 41.5437 178.77 41.5437C174.441 32.4061 227.8 25.1892 227.8 25.1892C186.579 15.058 160.807 19.1584 149.118 22.4965C144.99 23.6762 142.66 28.0283 143.989 32.1136L147.991 44.428ZM150.833 24.146C158.972 21.6845 174.928 18.7852 199.285 22.4362C192.643 24.0547 186.272 26.6624 180.28 30.8177C176.387 33.5202 172.804 36.884 170.298 40.621C167.615 40.6919 165.189 40.3382 162.562 40.8727C158.604 41.2768 153.823 42.0427 149.655 43.803L146.346 33.0372C145.185 29.2594 147.225 25.2344 150.833 24.146Z" fill="url(#k7)"/>
+<path d="M149.656 43.797C153.823 42.0375 158.604 41.2708 162.563 40.8666C165.19 40.3321 167.616 40.6858 170.298 40.6149C172.805 36.878 176.388 33.5142 180.281 30.8116C186.272 26.6563 192.644 24.0487 199.285 22.4301C174.928 18.7792 158.972 21.6785 150.834 24.1399C147.225 25.2293 145.185 29.2534 146.348 33.0311L149.656 43.797Z" fill="#ECEBE7"/>
+<path d="M185.707 108.217C185.707 108.217 200.145 141.313 184.144 155.095V173.607C184.144 183.849 178.304 193.239 169.049 197.627C141.878 210.507 87.5352 245.701 87.5352 321.168H91.7481C91.7481 220.568 185.982 197.713 185.982 197.713V157.834C207.008 153.87 208.93 171.162 208.756 178.984C208.711 180.94 208.383 182.877 207.745 184.722C192.54 228.817 200.622 321.168 200.622 321.168H208.489C208.489 321.168 198.337 230.976 227.801 170.85C257.266 110.723 185.707 108.217 185.707 108.217Z" fill="#ECEBE7"/>
+<path d="M207.746 184.72C208.383 182.875 208.711 180.938 208.757 178.982C208.931 171.16 207.01 153.868 185.983 157.832V197.711C185.983 197.711 91.749 220.565 91.749 321.167H200.623C200.623 321.167 192.541 228.815 207.746 184.72ZM126.159 319.316H97.6132C97.6132 234.469 185.983 200.843 185.983 200.843C134.368 234.857 126.159 319.316 126.159 319.316Z" fill="#2D5353"/>
+<path d="M97.6133 319.312H126.159C126.159 319.312 134.368 234.853 185.983 200.84C185.983 200.84 97.6133 234.465 97.6133 319.312Z" fill="#ECEBE7"/>
+<path d="M142.096 74.4164C149.083 76.4746 165.062 47.0329 148.279 48.2392C146.923 48.3367 145.422 48.5706 143.616 49.1016C143.616 49.1016 123.222 71.3105 115.227 77.5284C107.234 83.7463 72.1475 111.281 57.7147 121.714C57.7147 121.714 52.6066 128.376 55.7151 134.372C55.7151 134.372 55.8994 133.844 56.2513 133.021C57.7555 129.495 62.3381 120.517 68.8166 123.938C76.8116 128.154 71.4818 129.046 71.4818 129.046C71.4818 129.046 81.918 130.378 76.8125 119.717C76.8125 119.717 113.452 85.0776 137.655 85.9649C137.655 85.9649 137.509 85.8967 137.407 85.8479C136.179 85.2691 128.138 81.6075 123.222 82.6312L122.263 79.1212L121.888 77.7492C121.888 77.7492 134.546 72.1978 142.096 74.4164Z" fill="#ECEBE7"/>
+<defs>
+<linearGradient id="k0" x1="151.313" y1="46.9355" x2="151.313" y2="79.1187" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k1" x1="100.372" y1="85.8457" x2="100.372" y2="167.248" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k2" x1="169.057" y1="333.721" x2="169.057" y2="443.213" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k3" x1="127.452" y1="390.414" x2="127.452" y2="421.781" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k4" x1="131.404" y1="355.449" x2="131.404" y2="377.593" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k5" x1="277.249" y1="53.7266" x2="277.249" y2="312.614" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k6" x1="261.005" y1="164.686" x2="261.005" y2="264.332" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+<linearGradient id="k7" x1="185.708" y1="18.7783" x2="185.708" y2="44.428" gradientUnits="userSpaceOnUse"><stop offset="0.278846" stop-color="#2D5353"/><stop offset="1" stop-color="#3F3F3F" stop-opacity="0.2"/></linearGradient>
+</defs>
+          </svg>
+          <span>The Mētis Club</span>
+        </a>
+        <nav class="x-mast__links x-label" aria-label="Site">
+          <a href="/">← Back to home</a>
+        </nav>
+        </div>
+      </header>
+
+      <main class="x-col x-in">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="x-updated x-caps">Last updated: 23 October 2026</p>
+        <p class="x-intro">
+          These terms govern your use of themetisclub.com and any product, workshop or community offered by The Mētis Club, operated by Shivam Shinde, Mumbai, Maharashtra, India. By using the site or making a purchase, you agree to these terms.
+        </p>
+
+        <ol class="x-terms">
+          <li><span class="x-num">01</span><div><h2>Our services</h2><p>The Mētis Club offers educational content on sales and outreach, including a digital playbook (₹999), free live workshops, one-hour 1:1 consulting sessions (₹4,499), and a WhatsApp community. Current prices are listed on our <a href="/pricing">Pricing page</a>.</p></div></li>
+          <li><span class="x-num">02</span><div><h2>Purchases and payment</h2><p>Prices are shown in Indian Rupees at checkout. Payments are processed securely by Razorpay. We don't store your card or bank details.</p></div></li>
+          <li><span class="x-num">03</span><div><h2>Delivery</h2><p>Digital products are delivered by email to the address you provide at checkout, usually within minutes of payment.</p></div></li>
+          <li><span class="x-num">04</span><div><h2>Consulting sessions</h2><p>Sessions are held over video call at a time agreed by email after payment. Advice is based on the information you share and is educational, not a guarantee of results.</p></div></li>
+          <li><span class="x-num">05</span><div><h2>Licence and use</h2><p>When you buy a product, you get a personal, non-transferable licence to use it. You may not resell, share, copy, or redistribute any of our materials without written permission.</p></div></li>
+          <li><span class="x-num">06</span><div><h2>Workshops and community</h2><p>Workshop recordings and community content are for members only. We may remove anyone from the community for spam, abuse, or sharing paid material.</p></div></li>
+          <li><span class="x-num">07</span><div><h2>No guarantee of results</h2><p>Our content is educational. Outcomes such as reply rates or meetings booked depend on your own effort, offer and market, and are not guaranteed.</p></div></li>
+          <li><span class="x-num">08</span><div><h2>Intellectual property</h2><p>All content on this site and in our products, including text, frameworks, designs and the Mētis Club name and logo, belongs to The Mētis Club.</p></div></li>
+          <li><span class="x-num">09</span><div><h2>Limitation of liability</h2><p>To the extent permitted by law, our total liability for any claim is limited to the amount you paid for the product in question.</p></div></li>
+          <li><span class="x-num">10</span><div><h2>Refunds</h2><p>Refunds are handled under our <a href="/refund">Refund &amp; Cancellation Policy</a>.</p></div></li>
+          <li><span class="x-num">11</span><div><h2>Changes</h2><p>We may update these terms from time to time. The latest version will always be on this page.</p></div></li>
+          <li><span class="x-num">12</span><div><h2>Governing law</h2><p>These terms are governed by the laws of India, and any disputes are subject to the courts of Mumbai, Maharashtra.</p></div></li>
+          <li><span class="x-num">13</span><div><h2>Contact</h2><p>Questions? Email <a href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a>.</p></div></li>
+        </ol>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <nav class="x-label" aria-label="Policies">
+            <a href="/pricing">Pricing</a><span aria-hidden="true">·</span>
+            <a href="/refund">Refund Policy</a><span aria-hidden="true">·</span>
+            <a href="/terms" aria-current="page">Terms &amp; Conditions</a><span aria-hidden="true">·</span>
+            <a href="/privacy">Privacy Policy</a><span aria-hidden="true">·</span>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p class="x-label"><a class="x-mail" href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> · Mumbai, India</p>
+          <p class="x-label">© 2026 The Mētis Club</p>
+        </div>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+  </body>
+</html>
