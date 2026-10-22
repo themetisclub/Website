@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free LinkedIn Outreach Workshop · The Mētis Club</title>
+    <meta name="description" content="Free 40-minute live workshop: book calls from LinkedIn without sounding like everyone else. Hosted by Shivam Shinde." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-paper: #ECEBE7;
+        --x-surface: #F3F2EE;
+        --x-ink: #2D5353;
+        --x-muted: #566C6A;
+        --x-accent: #3D7470;
+        --x-rule: rgba(45, 83, 83, 0.14);
+        --x-rule-strong: rgba(45, 83, 83, 0.40);
+        --x-sans: "Manrope", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+        --x-max: 1200px;
+        --x-gut: clamp(24px, 5.5vw, 64px);
+        --x-sec: 112px;
+        --x-col-gap: clamp(16px, 2vw, 24px);
+        color-scheme: light;
+      }
+      html { scroll-padding-top: 80px; }
+      body { background: var(--x-paper); color: var(--x-ink); font-family: var(--x-sans); font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+      h1, h2, h3 { color: var(--x-ink); font-family: var(--x-sans); }
+      a { color: inherit; }
+      ::selection { background: var(--x-ink); color: var(--x-paper); }
+      :focus-visible { outline: 1px solid var(--x-ink); outline-offset: 3px; border-radius: 0; }
+      .x-page { display: block; max-width: none; padding: 0; gap: 0; }
+      .x-main { display: block; }
+      .x-wrap { width: 100%; max-width: calc(var(--x-max) + 2 * var(--x-gut)); margin: 0 auto; padding-inline: var(--x-gut); box-sizing: border-box; }
+      /* one caps-label style, 12px */
+      .x-caps, .x-field label, .x-field legend { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.6; color: var(--x-muted); margin: 0; }
+      /* one 12-column grid: left block 1–5, right block 7–12 */
+      .x-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--x-col-gap); row-gap: 40px; align-items: start; }
+      .x-a { grid-column: 1 / 6; }
+      .x-b { grid-column: 7 / 13; }
+      .x-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .x-h1, .x-h2 { font-weight: 500; letter-spacing: -0.04em; line-height: 1.05; margin: 0; }
+      .x-h1 em, .x-h2 em { font-style: normal; color: var(--x-accent); }
+      .x-h2 { font-size: clamp(34px, 3.9vw, 56px); }
+      .x-body { font-size: 16px; line-height: 1.6; max-width: 58ch; }
+      .x-quiet { color: var(--x-muted); }
+
+      /* nav */
+      .x-mast { position: sticky; top: 0; z-index: 50; background: var(--x-paper); border-bottom: 1px solid var(--x-rule); }
+      .x-mast__in { display: flex; justify-content: space-between; align-items: center; min-height: 64px; gap: 16px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; font-size: 16px; letter-spacing: -0.02em; min-height: 44px; color: var(--x-ink); }
+      .x-brand img { height: 22px; width: auto; }
+      .x-back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--x-ink); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1px; transition: text-decoration-color 0.3s var(--x-ease); }
+      .x-back:hover { text-decoration-color: var(--x-ink); }
+
+      /* buttons */
+      .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 44px; padding: 0 22px; border: 0; border-radius: 999px; background: var(--x-ink); color: #ECEBE7; font-family: var(--x-sans); font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1; text-decoration: none; cursor: pointer; transition: opacity 0.3s var(--x-ease); }
+      .x-btn:hover { opacity: 0.86; }
+      .x-btn[disabled] { opacity: 0.6; cursor: progress; }
+      .x-arrow { display: inline-block; transition: transform 0.3s var(--x-ease); }
+      .x-btn:hover .x-arrow, .x-tlink:hover .x-arrow { transform: translateX(3px); }
+      .x-tlink { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--x-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; text-decoration-color: var(--x-rule-strong); }
+      .x-tlink:hover { text-decoration-color: var(--x-ink); }
+
+      /* motion */
+      @keyframes x-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+      .x-in { animation: x-fade 600ms var(--x-ease) both; animation-delay: calc(var(--i, 0) * 90ms + 80ms); }
+      .js .x-rev { opacity: 0; transform: translateY(8px); transition: opacity 600ms var(--x-ease), transform 600ms var(--x-ease); }
+      .js .x-rev.is-in { opacity: 1; transform: none; }
+
+      /* sections */
+      .x-sec { position: relative; padding-block: var(--x-sec); }
+      .x-sec::before { content: ""; position: absolute; top: 0; left: var(--x-gut); right: var(--x-gut); height: 1px; background: var(--x-rule); }
+      .x-split__head { display: flex; flex-direction: column; gap: 16px; }
+
+      /* hero */
+      .x-hero { row-gap: 56px; align-items: center; padding-block: 64px var(--x-sec); }
+      .x-hero__copy { grid-column: 1 / 7; }
+      .x-hero__media { grid-column: 8 / 13; }
+      .x-hero .x-caps { margin-bottom: 24px; }
+      .x-h1 { font-size: clamp(40px, 4.4vw, 64px); line-height: 1.04; margin-bottom: 24px; }
+      .x-lede { max-width: 46ch; font-size: 18px; line-height: 1.6; margin: 0 0 32px; }
+      .x-meta { display: flex; flex-wrap: wrap; row-gap: 16px; margin: 0 0 32px; padding: 0; }
+      .x-meta div { padding-inline: 24px; }
+      .x-meta div:first-child { padding-left: 0; }
+      .x-meta div + div { border-left: 1px solid var(--x-rule); }
+      .x-meta dd { margin: 2px 0 0; font-size: 16px; font-weight: 500; line-height: 1.4; color: var(--x-ink); }
+      .x-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+      .x-host-line { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 14px; line-height: 1.4; color: var(--x-muted); }
+      .x-host-line img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex: none; filter: grayscale(1); }
+      .x-host-line strong { font-weight: 500; color: var(--x-ink); }
+
+      /* VSL placeholder */
+      .x-vsl { margin: 0; }
+      .x-vsl__frame { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 0; background: var(--x-ink); color: #ECEBE7; cursor: pointer; }
+      .x-vsl__frame::after { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(236, 235, 231, 0.55); pointer-events: none; }
+      .x-vsl__play { display: grid; place-items: center; width: 76px; height: 76px; border: 1.25px solid #ECEBE7; border-radius: 50%; transition: transform 0.3s var(--x-ease); }
+      .x-vsl__frame:hover .x-vsl__play { transform: scale(1.06); }
+      .x-vsl__play svg { width: 22px; height: 22px; margin-left: 4px; }
+      .x-vsl__frame:focus-visible { outline-offset: 4px; }
+      .x-vsl figcaption { margin-top: 14px; font-size: 14px; line-height: 1.5; color: var(--x-muted); }
+
+      /* problem rows */
+      .x-prob { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--x-rule); }
+      .x-prob li { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 20px; padding: 24px 0; border-top: 1px solid var(--x-rule); }
+      .x-prob__n, .x-ch__n { font-size: 14px; line-height: 1.5; color: var(--x-muted); font-variant-numeric: tabular-nums; }
+      .x-prob__t { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35; letter-spacing: -0.02em; }
+      .x-prob__d { margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: var(--x-muted); max-width: 52ch; }
+
+      /* chapters (from the main site) */
+      .x-ch { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--x-rule); }
+      .x-ch li { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; column-gap: 20px; align-items: baseline; padding: 24px 0; border-top: 1px solid var(--x-rule); }
+      .x-ch__t { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.35; letter-spacing: -0.02em; }
+      .x-ch__d { margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: var(--x-muted); max-width: 52ch; }
+      .x-ch .x-caps { text-align: right; line-height: 1.4; white-space: nowrap; }
+
+      /* you leave with */
+      .x-leave { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; margin: 48px 0 0; padding: 0; border-block: 1px solid var(--x-rule); }
+      .x-leave li { display: flex; flex-direction: column; gap: 20px; padding: 28px 24px 32px; min-width: 0; }
+      .x-leave li + li { border-left: 1px solid var(--x-rule); }
+      .x-leave li:first-child { padding-left: 0; }
+      .x-leave svg { width: 26px; height: 26px; color: var(--x-ink); }
+      .x-leave p { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.3; letter-spacing: -0.02em; }
+      .x-ln { fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+      .x-ln--acc { stroke: var(--x-accent); }
+
+      /* host */
+      .x-host { row-gap: 32px; align-items: stretch; }
+      .x-host__img { position: relative; min-height: 440px; margin: 0; border: 1px solid var(--x-rule); }
+      .x-host__img img { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); object-fit: cover; object-position: center top; filter: grayscale(1); }
+      .x-host__copy { display: flex; flex-direction: column; gap: 16px; align-self: center; }
+      .x-host__copy .x-body { margin: 0; line-height: 1.65; max-width: 60ch; }
+      .x-host__cred { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-top: 16px; border-top: 1px solid var(--x-rule); }
+      .x-host__cred p { margin: 0; font-size: 14px; color: var(--x-muted); }
+
+      /* form */
+      .x-join { row-gap: 32px; }
+      .x-join__head { display: flex; flex-direction: column; gap: 16px; }
+      .x-join__head .x-body { margin: 0; }
+      .x-facts { list-style: none; margin: 8px 0 0; padding: 0; border-bottom: 1px solid var(--x-rule); }
+      .x-facts li { padding: 12px 0; border-top: 1px solid var(--x-rule); font-size: 16px; font-weight: 500; line-height: 1.5; }
+      .x-form-box { background: var(--x-surface); border: 1px solid var(--x-rule); padding: clamp(24px, 3vw, 32px); }
+      .x-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+      .x-field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+      .x-field--full { grid-column: 1 / -1; }
+      .x-field label, .x-field legend { padding: 0; }
+      .x-more { grid-column: 1 / -1; justify-self: start; display: inline-flex; align-items: center; min-height: 44px; padding: 0; border: 0; background: none; color: var(--x-ink); font-family: var(--x-sans); font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; text-decoration-color: var(--x-rule-strong); }
+      .x-more:hover { text-decoration-color: var(--x-ink); }
+      .x-extra { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+      .x-extra[hidden] { display: none; }
+      .x-field label span, .x-field legend span { text-transform: none; letter-spacing: 0; font-weight: 400; }
+      .x-input { width: 100%; min-height: 44px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--x-rule-strong); border-radius: 0; background: transparent; color: var(--x-ink); font-family: var(--x-sans); font-size: 16px; line-height: 1.4; -webkit-appearance: none; appearance: none; transition: border-color 0.3s var(--x-ease); }
+      .x-input::placeholder { color: var(--x-muted); opacity: 0.8; }
+      .x-input:focus { outline: none; border-bottom-color: var(--x-ink); }
+      .x-input:focus-visible { outline: none; box-shadow: 0 1px 0 0 var(--x-ink); }
+      textarea.x-input { min-height: 72px; resize: vertical; }
+      select.x-input { padding-right: 24px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%232D5353' stroke-width='1.25'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 2px center; cursor: pointer; }
+      .x-field.is-bad .x-input { border-bottom-color: #9B3B32; }
+      .x-err { min-height: 0; margin: 0; font-size: 14px; line-height: 1.4; color: #9B3B32; }
+      .x-err:empty { display: none; }
+      fieldset.x-field { margin: 0; padding: 0; border: 0; }
+      .x-checks { display: flex; flex-wrap: wrap; gap: 0 24px; }
+      .x-check { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; font-weight: 500; color: var(--x-ink); cursor: pointer; }
+      .x-check input { width: 18px; height: 18px; margin: 0; accent-color: var(--x-ink); cursor: pointer; }
+      .x-honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+      .x-form__foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+      .x-form__foot p { margin: 0; font-size: 14px; color: var(--x-muted); }
+      .x-form__msg { grid-column: 1 / -1; margin: 0; font-size: 16px; color: #9B3B32; }
+      .x-form__msg:empty { display: none; }
+      .x-form__msg a { color: inherit; }
+      .x-done { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+      .x-done[hidden], .x-form[hidden] { display: none; }
+      .x-done:focus { outline: none; }
+      .x-done .x-body { margin: 0; }
+
+      /* FAQ */
+      .x-faq { border-bottom: 1px solid var(--x-rule); }
+      .x-faq details { border-top: 1px solid var(--x-rule); }
+      .x-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 44px; padding: 20px 0; list-style: none; cursor: pointer; font-size: 18px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.35; color: var(--x-ink); }
+      .x-faq summary::-webkit-details-marker { display: none; }
+      .x-faq summary::after { content: "+"; flex: none; font-size: 24px; font-weight: 400; line-height: 1; color: var(--x-muted); transition: transform 0.3s var(--x-ease); }
+      .x-faq details[open] summary::after { transform: rotate(45deg); }
+      .x-faq details p { margin: -4px 0 0; padding: 0 40px 24px 0; font-size: 16px; line-height: 1.6; color: var(--x-muted); max-width: 60ch; }
+
+      /* final band */
+      .x-final { align-items: end; }
+      .x-final .x-h2 { grid-column: 1 / 9; }
+      .x-final__cta { grid-column: 9 / 13; justify-self: end; }
+
+      /* footer (from the main site) */
+      .x-foot { background: var(--x-ink); color: #ECEBE7; padding: var(--x-sec) 0 40px; text-align: center; }
+      .x-foot .x-wrap { max-width: 1240px; padding-inline: clamp(20px, 4vw, 48px); }
+      .x-foot :focus-visible { outline-color: #ECEBE7; }
+      .x-foot img { width: min(320px, 80%); height: auto; margin: 0 auto 64px; }
+      .x-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; padding-block: 20px; border-block: 1px solid rgba(236, 235, 231, 0.2); margin-bottom: 28px; }
+      .x-foot nav a { text-decoration: none; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; opacity: 0.85; font-size: 14px; font-weight: 600; }
+      .x-foot nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot nav span { display: inline-flex; align-items: center; opacity: 0.4; }
+      .x-foot p { opacity: 0.8; font-size: 14px; font-weight: 600; }
+      .x-foot p + p { margin-top: 10px; opacity: 0.6; }
+      .x-foot a.x-mail { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+
+      /* mobile sticky bar */
+      .x-bar { display: none; }
+
+      @media (max-width: 960px) {
+        :root { --x-sec: 80px; }
+        .x-a, .x-b, .x-hero__copy, .x-hero__media, .x-final .x-h2, .x-final__cta { grid-column: 1 / -1; }
+        .x-final__cta { justify-self: start; }
+        .x-host__img { width: min(300px, 100%); min-height: 0; padding: 8px; }
+        .x-host__img img { position: static; width: 100%; height: auto; aspect-ratio: 4 / 5; }
+      }
+      @media (max-width: 560px) {
+        .x-form, .x-extra { grid-template-columns: minmax(0, 1fr); }
+      }
+      @media (max-width: 900px) {
+        .x-leave { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .x-leave li, .x-leave li:first-child { padding: 24px 20px 28px; border-left: 0; }
+        .x-leave li:nth-child(odd) { padding-left: 0; }
+        .x-leave li:nth-child(even) { border-left: 1px solid var(--x-rule); }
+        .x-leave li:nth-child(n + 3) { border-top: 1px solid var(--x-rule); }
+        .x-ch li { grid-template-columns: 32px minmax(0, 1fr); row-gap: 8px; }
+        .x-ch .x-caps { grid-column: 2; grid-row: 1; text-align: left; }
+      }
+      @media (max-width: 640px) {
+        :root { --x-sec: 64px; }
+        .x-hero { padding-top: 40px; row-gap: 40px; }
+        .x-h1 { font-size: clamp(36px, 10vw, 48px); }
+        .x-meta div { padding-inline: 14px; }
+        .x-prob li { grid-template-columns: 32px minmax(0, 1fr); }
+        .x-leave p { font-size: 16px; }
+        .x-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px var(--x-gut) calc(10px + env(safe-area-inset-bottom)); background: var(--x-paper); border-top: 1px solid var(--x-rule); transition: transform 0.3s var(--x-ease); }
+        .x-bar.is-hidden { transform: translateY(110%); }
+        .x-bar p { margin: 0; font-size: 14px; font-weight: 600; }
+        .x-foot { padding-bottom: 104px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+        .js .x-rev { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-page" id="top">
+      <header class="x-mast">
+        <div class="x-wrap x-mast__in">
+          <a class="x-brand" href="/" aria-label="The Mētis Club home"><img src="knight.svg" alt="" /><span>The Mētis Club</span></a>
+          <a class="x-back" href="/"><span aria-hidden="true">←</span> Back to The Mētis Club</a>
+        </div>
+      </header>
+
+      <main class="x-main">
+        <section class="x-wrap x-grid x-hero" id="hero">
+          <div class="x-hero__copy">
+            <p class="x-caps x-in" style="--i: 0">LinkedIn outreach workshop</p>
+            <h1 class="x-h1 x-in" style="--i: 1">Book calls from LinkedIn <em>without sounding</em> like everyone else.</h1>
+            <p class="x-lede x-in" style="--i: 2">The exact system I use to find high-intent buyers, start conversations that get replies, and turn those replies into meetings.</p>
+            <dl class="x-meta x-in" style="--i: 3">
+              <div><dt class="x-caps">When</dt><dd>Next Sunday, date shared on WhatsApp</dd></div>
+              <div><dt class="x-caps">Length</dt><dd>40 min, live</dd></div>
+              <div><dt class="x-caps">Cost</dt><dd>Free</dd></div>
+            </dl>
+            <div class="x-cta x-in" style="--i: 4">
+              <a class="x-btn" href="#join">Save my seat <span class="x-arrow" aria-hidden="true">→</span></a>
+              <p class="x-host-line"><img src="founder.webp" alt="" /><span>Hosted by <strong>Shivam Shinde</strong></span></p>
+            </div>
+          </div>
+          <div id="vsl" class="x-hero__media x-in" style="--i: 3">
+            <!-- Replace with video embed (YouTube/Vimeo/Wistia iframe) -->
+            <figure class="x-vsl">
+              <a class="x-vsl__frame" href="#join" aria-label="Video coming soon. Save your seat instead">
+                <span class="x-vsl__play" aria-hidden="true"><svg viewBox="0 0 22 22"><path d="M5 3.5l13 7.5-13 7.5z" fill="none" stroke="#ECEBE7" stroke-width="1.25" stroke-linejoin="round" /></svg></span>
+              </a>
+              <figcaption>Watch: why most LinkedIn outreach gets ignored (video coming soon)</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="x-sec x-wrap" id="problem">
+          <div class="x-grid x-rev">
+            <div class="x-split__head x-a">
+              <p class="x-caps">The problem</p>
+              <h2 class="x-h2">Three places outreach <em>stalls.</em></h2>
+            </div>
+            <ul class="x-prob x-b">
+              <li><span class="x-prob__n">01</span><div><h3 class="x-prob__t">You send connection requests and nothing happens.</h3><p class="x-prob__d">They sit pending, or get accepted and go nowhere.</p></div></li>
+              <li><span class="x-prob__n">02</span><div><h3 class="x-prob__t">Your messages read like pitches, so they get left on seen.</h3><p class="x-prob__d">Buyers can spot a template in the first line.</p></div></li>
+              <li><span class="x-prob__n">03</span><div><h3 class="x-prob__t">The few replies you get never turn into calls.</h3><p class="x-prob__d">The thread stalls right where it should move to a meeting.</p></div></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="x-sec x-wrap" id="cover">
+          <div class="x-grid">
+            <div class="x-split__head x-a x-rev">
+              <p class="x-caps">What we'll cover</p>
+              <h2 class="x-h2">Seven chapters, from ICP to <em>tracking.</em></h2>
+            </div>
+            <ol class="x-ch x-b x-rev" aria-label="Workshop chapters">
+              <li><span class="x-ch__n">01</span><div><h3 class="x-ch__t">Niche &amp; ICP</h3><p class="x-ch__d">Define who actually buys: industry, company size, budget and the trigger that makes them need you now.</p></div><span class="x-caps">ICP</span></li>
+              <li><span class="x-ch__n">02</span><div><h3 class="x-ch__t">Signal mapping</h3><p class="x-ch__d">Spot high-intent leads in your industry: hiring posts, funding, new leadership, launches, and people posting about the problem you solve.</p></div><span class="x-caps">Signals</span></li>
+              <li><span class="x-ch__n">03</span><div><h3 class="x-ch__t">The right point of contact</h3><p class="x-ch__d">Find the real decision-maker inside each company, and who to go to when they go quiet.</p></div><span class="x-caps">Contact</span></li>
+              <li><span class="x-ch__n">04</span><div><h3 class="x-ch__t">Offer &amp; messages</h3><p class="x-ch__d">Frame your offer around their problem, not your service. Openers that are specific, relevant and easy to say yes to, with word-for-word 2- and 3-message sequences.</p></div><span class="x-caps">Messaging</span></li>
+              <li><span class="x-ch__n">05</span><div><h3 class="x-ch__t">The psychology of a yes</h3><p class="x-ch__d">What turns a reply into a meeting: curiosity, relevance, proof, a small first ask. And what kills it: pitch dumps, links, early calendar links, vague asks.</p></div><span class="x-caps">Conversion</span></li>
+              <li><span class="x-ch__n">06</span><div><h3 class="x-ch__t">Follow-up sequences</h3><p class="x-ch__d">When and how to follow up before and after the call, so threads don't die and booked calls show up.</p></div><span class="x-caps">Follow-up</span></li>
+              <li><span class="x-ch__n">07</span><div><h3 class="x-ch__t">Infra, testing &amp; tracking</h3><p class="x-ch__d">Profile and Sales Navigator setup, safe daily limits, A/B testing openers, and the five numbers to track: acceptance, reply, positive reply, meetings booked, show rate.</p></div><span class="x-caps">Tracking</span></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="x-sec x-wrap" id="leave">
+          <div class="x-split__head x-rev">
+            <p class="x-caps">You leave with</p>
+            <h2 class="x-h2">Five things you can use <em>on Monday.</em></h2>
+          </div>
+          <ul class="x-leave x-rev">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="x-ln" cx="12" cy="12" r="9" /><circle class="x-ln" cx="12" cy="12" r="5" /><circle class="x-ln x-ln--acc" cx="12" cy="12" r="1" /></svg><p>Your ICP sheet</p></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="x-ln" d="M2 12h4l2.5-6 5 12 2.5-6h6" /></svg><p>A signal map for your industry</p></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="x-ln" d="M4 4h16v12H10l-6 4z" /><path class="x-ln x-ln--acc" d="M8 8.5h8M8 12h5" /></svg><p>Word-for-word message sequences</p></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="x-ln" d="M20 12a8 8 0 1 1-2.34-5.66" /><path class="x-ln" d="M20 3.5V7h-3.5" /><path class="x-ln x-ln--acc" d="M12 8v4l2.5 2" /></svg><p>A follow-up cadence</p></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="x-ln" d="M3 20h18" /><path class="x-ln x-ln--acc" d="M4 16l5-5 4 3 7-8M16 6h4v4" /></svg><p>A tracking sheet</p></li>
+          </ul>
+        </section>
+
+        <section class="x-sec x-wrap" id="host">
+          <div class="x-grid x-host x-rev">
+            <figure class="x-host__img x-a"><img src="founder.webp" alt="Portrait of Shivam Shinde" /></figure>
+            <div class="x-host__copy x-b">
+              <p class="x-caps">Your host</p>
+              <h2 class="x-h2">Shivam Shinde, founder of <em>Reblues Media</em></h2>
+              <p class="x-body">I spent years failing at outreach: burned email domains, tools that promised everything, thousands of messages into the void. After enough failures, patterns showed up.</p>
+              <p class="x-body">At Reblues Media, cold email got 10% open rates. We moved to LinkedIn in 2025 and saw about 60%. This workshop is that system.</p>
+              <div class="x-host__cred">
+                <a class="x-tlink" href="https://www.linkedin.com/in/shivamshinderebluesmedia" target="_blank" rel="noopener">LinkedIn <span class="x-arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-wrap" id="join">
+          <div class="x-grid x-join">
+            <div class="x-join__head x-a">
+              <h2 class="x-h2">Save your <em>seat.</em></h2>
+              <p class="x-body x-quiet">Three fields, about 30 seconds.</p>
+              <ul class="x-facts">
+                <li>Live on Zoom/Meet</li>
+                <li>Free</li>
+                <li>Invite via WhatsApp</li>
+              </ul>
+            </div>
+            <div class="x-form-box x-b">
+              <form class="x-form" id="x-form" novalidate>
+                <div class="x-field x-field--full">
+                  <label for="f-name">Name*</label>
+                  <input class="x-input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name" />
+                  <p class="x-err" id="e-name" aria-live="polite"></p>
+                </div>
+                <div class="x-field">
+                  <label for="f-email">Email*</label>
+                  <input class="x-input" id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email" />
+                  <p class="x-err" id="e-email" aria-live="polite"></p>
+                </div>
+                <div class="x-field">
+                  <label for="f-wa">WhatsApp number*</label>
+                  <input class="x-input" id="f-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+91" required aria-describedby="e-wa" />
+                  <p class="x-err" id="e-wa" aria-live="polite"></p>
+                </div>
+                <button class="x-more" type="button" id="x-more" aria-expanded="false" aria-controls="x-extra">+ Add details (optional)</button>
+                <div class="x-extra" id="x-extra" hidden>
+                <div class="x-field">
+                  <label for="f-site">Company website</label>
+                  <input class="x-input" id="f-site" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourcompany.com" />
+                </div>
+                <div class="x-field">
+                  <label for="f-sell">What do you sell?</label>
+                  <select class="x-input" id="f-sell" name="sells">
+                    <option value="">Choose one</option>
+                    <option>Agency services</option>
+                    <option>Freelance</option>
+                    <option>Consulting</option>
+                    <option>SaaS</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="x-field x-field--full">
+                  <label for="f-about">About you or your biggest outreach problem</label>
+                  <textarea class="x-input" id="f-about" name="about" rows="2"></textarea>
+                </div>
+                <fieldset class="x-field x-field--full">
+                  <legend>I'm interested in</legend>
+                  <div class="x-checks">
+                    <label class="x-check"><input type="checkbox" name="interests" value="Free workshop" checked /> Free workshop</label>
+                    <label class="x-check"><input type="checkbox" name="interests" value="The Playbook" /> The Playbook</label>
+                  </div>
+                </fieldset>
+                </div>
+                <div class="x-honey" aria-hidden="true">
+                  <label for="f-honey">Leave this empty</label>
+                  <input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+                <p class="x-form__msg" id="x-form-msg" role="alert"></p>
+                <div class="x-form__foot">
+                  <button class="x-btn" type="submit" id="x-submit">Get the invite <span class="x-arrow" aria-hidden="true">→</span></button>
+                  <p>We'll only use this to send workshop details.</p>
+                </div>
+              </form>
+              <div class="x-done" id="x-done" hidden tabindex="-1">
+                <h3 class="x-h2">You're <em>in.</em></h3>
+                <p class="x-body">Last step: join the WhatsApp community, where the workshop link goes out.</p>
+                <a class="x-btn" id="x-wa" href="#whatsapp-link-pending" target="_blank" rel="noopener">Join the WhatsApp community <span class="x-arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-wrap" id="faq">
+          <div class="x-grid">
+            <div class="x-split__head x-a x-rev">
+              <p class="x-caps">FAQ</p>
+              <h2 class="x-h2">Before you <em>sign up.</em></h2>
+            </div>
+            <div class="x-faq x-b x-rev">
+              <details><summary>Is it a sales pitch?</summary><p>It's 40 minutes of the actual system. I'll mention the playbook at the end, and that's it.</p></details>
+              <details><summary>Do I need Sales Navigator?</summary><p>No. It helps at scale, and we'll show you when it's worth paying for.</p></details>
+              <details><summary>Will this work in my niche?</summary><p>If you sell a service to businesses, yes.</p></details>
+              <details><summary>Is it recorded?</summary><p>Join live for Q&amp;A. Recordings go to the WhatsApp community when available.</p></details>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-wrap" id="final">
+          <div class="x-grid x-final x-rev">
+            <h2 class="x-h2">Stop sending messages.<br />Start making <em>moves.</em></h2>
+            <a class="x-btn x-final__cta" href="#join">Save my seat <span class="x-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <img src="logo-lockup-light.svg" alt="The Mētis Club, Estd. 2025, Scale Your Sales" />
+          <nav aria-label="Policies">
+            <a href="/pricing">Pricing</a><span aria-hidden="true">·</span>
+            <a href="/refund">Refund Policy</a><span aria-hidden="true">·</span>
+            <a href="/terms">Terms &amp; Conditions</a><span aria-hidden="true">·</span>
+            <a href="/privacy">Privacy Policy</a><span aria-hidden="true">·</span>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p><a class="x-mail" href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> · Mumbai, India</p>
+          <p>© 2026 The Mētis Club</p>
+        </div>
+      </footer>
+
+      <div class="x-bar" id="x-bar">
+        <p>Free workshop</p>
+        <a class="x-btn" href="#join">Save my seat <span class="x-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      var WHATSAPP_URL = "#whatsapp-link-pending";
+      var FORM_ENDPOINT = "https://formsubmit.co/ajax/themetisclub@gmail.com";
+
+      (function () {
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        document.getElementById("x-wa").href = WHATSAPP_URL;
+
+        // ---------- optional details toggle ----------
+        var more = document.getElementById("x-more");
+        var extra = document.getElementById("x-extra");
+        more.addEventListener("click", function () {
+          var open = extra.hidden;
+          extra.hidden = !open;
+          more.setAttribute("aria-expanded", open ? "true" : "false");
+          more.textContent = open ? "− Hide details" : "+ Add details (optional)";
+          if (open) document.getElementById("f-site").focus();
+        });
+
+        // ---------- scroll reveal ----------
+        var targets = document.querySelectorAll(".x-rev");
+        if (reduce || !("IntersectionObserver" in window)) {
+          targets.forEach(function (t) { t.classList.add("is-in"); });
+        } else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+          }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+          targets.forEach(function (t) { io.observe(t); });
+        }
+
+        // ---------- mobile bar hides while the form is in view ----------
+        var bar = document.getElementById("x-bar");
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(function (entries) {
+            bar.classList.toggle("is-hidden", entries[0].isIntersecting);
+          }, { threshold: 0.05 }).observe(document.getElementById("join"));
+        }
+
+        // ---------- signup form ----------
+        var form = document.getElementById("x-form");
+        var msg = document.getElementById("x-form-msg");
+        var btn = document.getElementById("x-submit");
+        var btnHTML = btn.innerHTML;
+        var tried = false;
+        var rules = [
+          { id: "f-name", err: "e-name", test: function (v) { return v.length > 0 ? "" : "Please enter your name."; } },
+          { id: "f-email", err: "e-email", test: function (v) { return !v ? "Please enter your email." : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "That email doesn't look right."; } },
+          { id: "f-wa", err: "e-wa", test: function (v) { var d = v.replace(/\D/g, ""); return !v ? "Please enter your WhatsApp number." : d.length >= 8 && d.length <= 15 ? "" : "Enter a full number with country code, like +91 98765 43210."; } }
+        ];
+        function check(r) {
+          var input = document.getElementById(r.id);
+          var e = r.test(input.value.trim());
+          document.getElementById(r.err).textContent = e;
+          input.closest(".x-field").classList.toggle("is-bad", !!e);
+          input.setAttribute("aria-invalid", e ? "true" : "false");
+          return !e;
+        }
+        rules.forEach(function (r) {
+          var input = document.getElementById(r.id);
+          input.addEventListener("blur", function () { if (tried || input.value.trim()) check(r); });
+          input.addEventListener("input", function () { if (tried) check(r); });
+        });
+
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          tried = true;
+          msg.textContent = "";
+          var firstBad = null;
+          rules.forEach(function (r) { if (!check(r) && !firstBad) firstBad = document.getElementById(r.id); });
+          if (firstBad) { firstBad.focus(); return; }
+
+          var interests = [].map.call(form.querySelectorAll('input[name="interests"]:checked'), function (c) { return c.value; });
+          var f = form.elements;
+          var data = {
+            name: f.namedItem("name").value.trim(),
+            email: f.namedItem("email").value.trim(),
+            whatsapp: f.namedItem("whatsapp").value.trim(),
+            website: f.namedItem("website").value.trim(),
+            sells: f.namedItem("sells").value,
+            about: f.namedItem("about").value.trim(),
+            interests: interests.join(", "),
+            _subject: "New workshop signup",
+            _template: "table",
+            _honey: f.namedItem("_honey").value
+          };
+
+          btn.disabled = true;
+          btn.textContent = "Sending…";
+          fetch(FORM_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify(data)
+          })
+            .then(function (res) { return res.json().then(function (j) { return { ok: res.ok, j: j }; }); })
+            .then(function (r) {
+              if (!r.ok || (r.j && (r.j.success === false || r.j.success === "false"))) throw new Error("failed");
+              form.hidden = true;
+              var done = document.getElementById("x-done");
+              done.hidden = false;
+              done.focus();
+            })
+            .catch(function () {
+              msg.innerHTML = 'Something went wrong. Email us at <a href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a>.';
+              btn.disabled = false;
+              btn.innerHTML = btnHTML;
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>
