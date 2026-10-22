@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact us · The Mētis Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-paper: #ECEBE7;
+        --x-ink: #2D5353;
+        --x-text: #2D5353;
+        --x-muted: #566C6A;
+        --x-rule: rgba(45, 83, 83, 0.14);
+        --x-rule-strong: rgba(45, 83, 83, 0.40);
+        --x-teal: #2D5353;
+        --x-sans: "Manrope", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+        --x-max: 1200px;
+        --x-gut: clamp(24px, 5.5vw, 64px);
+        color-scheme: light;
+      }
+      html, body { background: var(--x-paper); }
+      body { color: var(--x-text); font-family: var(--x-sans); font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+      h1 { color: var(--x-ink); text-wrap: balance; }
+      p { text-wrap: pretty; }
+      a { color: inherit; }
+      ::selection { background: var(--x-ink); color: var(--x-paper); }
+      :focus-visible { outline: 1px solid var(--x-ink); outline-offset: 3px; }
+
+      .x-page { display: flex; flex-direction: column; min-height: 100vh; max-width: none; padding: 0; gap: 0; }
+      .x-label { font-family: var(--x-sans); font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.5; }
+      .x-caps { font-family: var(--x-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.6; color: var(--x-muted); }
+      .x-wrap { width: 100%; max-width: calc(var(--x-max) + 2 * var(--x-gut)); margin: 0 auto; padding-inline: var(--x-gut); box-sizing: border-box; }
+
+      /* masthead: paper, one hairline */
+      .x-mast { position: sticky; top: 0; z-index: 50; background: var(--x-paper); border-bottom: 1px solid var(--x-rule); }
+      .x-mast__in { display: flex; justify-content: space-between; align-items: center; min-height: 64px; gap: 16px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--x-sans); font-weight: 600; font-size: 15px; letter-spacing: -0.02em; min-height: 44px; color: var(--x-ink); }
+      .x-brand img { height: 22px; width: auto; }
+      .x-mast__links { display: flex; justify-content: flex-end; align-items: center; gap: 32px; }
+      .x-mast__links a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1px; min-height: 44px; display: inline-flex; align-items: center; color: var(--x-text); transition: text-decoration-color 0.3s var(--x-ease), color 0.3s var(--x-ease); }
+      .x-mast__links a:hover { color: var(--x-ink); text-decoration-color: var(--x-ink); }
+
+      /* contact block */
+      .x-main { flex: 1; padding-block: clamp(56px, 10vh, 120px); }
+      .x-contact { max-width: 760px; }
+      .x-h1 { font-family: var(--x-sans); font-weight: 500; font-size: clamp(48px, 6vw, 88px); line-height: 1.0; letter-spacing: -0.04em; color: var(--x-ink); margin: 16px 0 24px; }
+      .x-lede { max-width: 44ch; font-size: 17px; line-height: 1.6; color: var(--x-text); margin: 0 0 48px; }
+      .x-rows { margin: 0; border-top: 1px solid var(--x-rule); }
+      .x-row { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--x-rule); align-items: baseline; }
+      .x-row dd { margin: 0; overflow-wrap: anywhere; font-size: 18px; font-weight: 500; line-height: 1.35; letter-spacing: -0.02em; color: var(--x-ink); }
+      .x-row a { display: inline-flex; align-items: center; min-height: 44px; margin-block: -11px; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--x-rule-strong); text-underline-offset: 6px; transition: text-decoration-color 0.3s var(--x-ease); }
+      .x-row a:hover { text-decoration-color: var(--x-ink); }
+
+      /* footer band, as on the main site */
+      .x-foot { background: var(--x-teal); color: #ECEBE7; padding: clamp(72px, 10vw, 120px) 0 40px; text-align: center; }
+      .x-foot .x-wrap { max-width: 1240px; padding-inline: clamp(20px, 4vw, 48px); }
+      .x-foot :focus-visible { outline-color: #ECEBE7; }
+      .x-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; padding-block: 20px; border-block: 1px solid rgba(236, 235, 231, 0.2); margin-bottom: 28px; }
+      .x-foot nav a { text-decoration: none; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; opacity: 0.85; }
+      .x-foot nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot nav span { display: inline-flex; align-items: center; opacity: 0.4; }
+      .x-foot p { margin: 0; opacity: 0.8; }
+      .x-foot p + p { margin-top: 10px; opacity: 0.6; }
+      .x-foot a.x-mail { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+
+      @media (max-width: 760px) {
+        .x-row { grid-template-columns: 1fr; gap: 4px; }
+        .x-h1 { font-size: clamp(48px, 12vw, 60px); }
+        .x-mast__links { gap: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-page" id="top">
+      <header class="x-mast">
+        <div class="x-wrap x-mast__in">
+          <a class="x-brand" href="/" aria-label="The Mētis Club, home"><img src="knight.svg" alt="" /><span>The Mētis Club</span></a>
+          <nav class="x-mast__links x-label" aria-label="Site">
+            <a href="/">← Back to home</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main x-main">
+        <div class="x-wrap">
+          <div class="x-contact">
+            <p class="x-caps">Contact</p>
+            <h1 class="x-h1">Contact us.</h1>
+            <p class="x-lede">Questions about the workshop, the playbook, consulting or a purchase? Write to us. A real person reads every email.</p>
+            <dl class="x-rows">
+              <div class="x-row">
+                <dt class="x-caps">Email</dt>
+                <dd><a href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a></dd>
+              </div>
+              <div class="x-row">
+                <dt class="x-caps">Operated by</dt>
+                <dd>Shivam Shinde</dd>
+              </div>
+              <div class="x-row">
+                <dt class="x-caps">Address</dt>
+                <dd>Mumbai, Maharashtra, India</dd>
+              </div>
+              <div class="x-row">
+                <dt class="x-caps">Response time</dt>
+                <dd>Within 1–2 working days</dd>
+              </div>
+              <div class="x-row">
+                <dt class="x-caps">LinkedIn</dt>
+                <dd><a href="https://www.linkedin.com/in/shivamshinderebluesmedia" target="_blank" rel="noopener">linkedin.com/in/shivamshinderebluesmedia</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <nav class="x-label" aria-label="Policies">
+            <a href="/pricing">Pricing</a><span aria-hidden="true">·</span>
+            <a href="/refund">Refund Policy</a><span aria-hidden="true">·</span>
+            <a href="/terms">Terms &amp; Conditions</a><span aria-hidden="true">·</span>
+            <a href="/privacy">Privacy Policy</a><span aria-hidden="true">·</span>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p class="x-label"><a class="x-mail" href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> · Mumbai, India</p>
+          <p class="x-label">© 2026 The Mētis Club</p>
+        </div>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+  </body>
+</html>
