@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Journal · The Mētis Club</title>
+    <meta name="description" content="Field notes from running outreach at Reblues Media: what worked, what burned, and the systems behind it." />
+    <link rel="canonical" href="https://website-flame-zeta-66.vercel.app/journal" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Mētis Club" />
+    <meta property="og:title" content="Journal · The Mētis Club" />
+    <meta property="og:description" content="Notes on outreach that books calls. Field notes from running outreach at Reblues Media." />
+    <meta property="og:url" content="https://website-flame-zeta-66.vercel.app/journal" />
+    <meta property="og:image" content="https://website-flame-zeta-66.vercel.app/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Journal · The Mētis Club" />
+    <meta name="twitter:description" content="Notes on outreach that books calls. Field notes from running outreach at Reblues Media." />
+    <meta name="twitter:image" content="https://website-flame-zeta-66.vercel.app/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      /* tokens copied from the main Mētis Club site */
+      :root {
+        --x-paper: #ECEBE7;
+        --x-surface: #F3F2EE;
+        --x-ink: #2D5353;
+        --x-text: #2D5353;
+        --x-muted: #566C6A;
+        --x-rule: rgba(45, 83, 83, 0.14);
+        --x-rule-strong: rgba(45, 83, 83, 0.40);
+        --x-teal: #2D5353;
+        --x-accent: #3D7470;
+        --x-sans: "Manrope", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+        --x-max: 1200px;
+        --x-gut: clamp(24px, 5.5vw, 64px);
+        color-scheme: light;
+      }
+      body { background: var(--x-paper); color: var(--x-text); font-family: var(--x-sans); font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+      h1, h2, h3 { color: var(--x-ink); text-wrap: balance; margin: 0; }
+      p, li { text-wrap: pretty; }
+      a { color: inherit; }
+      :focus-visible { outline: 1px solid var(--x-ink); outline-offset: 3px; }
+      .x-page { display: block; max-width: none; padding: 0; gap: 0; }
+      .x-label { font-family: var(--x-sans); font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.5; }
+      .x-caps { font-family: var(--x-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.6; color: var(--x-muted); }
+      .x-wrap { width: 100%; max-width: calc(var(--x-max) + 2 * var(--x-gut)); margin: 0 auto; padding-inline: var(--x-gut); box-sizing: border-box; }
+
+      /* masthead */
+      .x-mast { position: sticky; top: 0; z-index: 50; background: var(--x-paper); border-bottom: 1px solid var(--x-rule); }
+      .x-mast__in { display: flex; justify-content: space-between; align-items: center; min-height: 64px; gap: 16px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--x-sans); font-weight: 600; font-size: 15px; letter-spacing: -0.02em; min-height: 44px; color: var(--x-ink); }
+      .x-brand img { height: 22px; width: auto; }
+      .x-mast__links { display: flex; justify-content: flex-end; align-items: center; gap: 32px; }
+      .x-mast__links a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1px; min-height: 44px; display: inline-flex; align-items: center; color: var(--x-text); transition: text-decoration-color 0.3s var(--x-ease), color 0.3s var(--x-ease); }
+      .x-mast__links a:hover, .x-mast__links a[aria-current="page"] { color: var(--x-ink); text-decoration-color: var(--x-ink); }
+      .x-mast__links a.x-join { min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--x-ink); color: var(--x-paper); text-decoration: none; transition: opacity 0.3s var(--x-ease); }
+      .x-mast__links a.x-join:hover { opacity: 0.86; }
+
+      /* journal header */
+      .x-jhead { padding-block: clamp(64px, 9vw, 112px) clamp(40px, 5vw, 56px); }
+      .x-eyebrow { margin: 0 0 24px; }
+      .x-h1 { font-family: var(--x-sans); font-weight: 500; font-size: clamp(44px, 6vw, 88px); line-height: 1.0; letter-spacing: -0.04em; color: var(--x-ink); max-width: 14ch; margin: 0 0 28px; }
+      .x-h1 em { font-style: normal; font-weight: 500; color: var(--x-accent); }
+      .x-lede { max-width: 52ch; font-size: 17px; line-height: 1.6; color: var(--x-muted); margin: 0; }
+
+      /* filter row: plain text tags */
+      .x-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; margin: 0; padding: 8px 0; list-style: none; border-top: 1px solid var(--x-rule); }
+      .x-filter button { appearance: none; background: none; border: 0; padding: 0; min-height: 44px; font: inherit; font-family: var(--x-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--x-muted); cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 6px; transition: color 0.3s var(--x-ease), text-decoration-color 0.3s var(--x-ease); }
+      .x-filter button:hover { color: var(--x-ink); }
+      .x-filter button[aria-pressed="true"] { color: var(--x-ink); text-decoration-color: var(--x-ink); }
+
+      /* post list: hairline-ruled rows */
+      .x-posts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--x-rule-strong); border-bottom: 1px solid var(--x-rule); }
+      .x-post + .x-post { border-top: 1px solid var(--x-rule); }
+      .x-post[hidden] { display: none; }
+      .x-post a { display: grid; grid-template-columns: 160px minmax(0, 1fr) auto; column-gap: clamp(20px, 3vw, 48px); align-items: baseline; padding: 32px 0; text-decoration: none; color: var(--x-ink); }
+      .x-post__date { margin: 0; }
+      .x-post__t { font-family: var(--x-sans); font-weight: 500; font-size: 28px; line-height: 1.1; letter-spacing: -0.04em; color: var(--x-ink); margin: 0 0 10px; max-width: 30ch; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 6px; transition: text-decoration-color 0.3s var(--x-ease); }
+      .x-post a:hover .x-post__t { text-decoration-color: var(--x-ink); }
+      .x-post__ex { margin: 0; font-size: 15px; line-height: 1.55; color: var(--x-muted); max-width: 62ch; }
+      .x-post__meta { margin: 0; text-align: right; white-space: nowrap; }
+      .x-post__meta span + span::before { content: "·"; padding: 0 8px; }
+      .x-empty { margin: 0; padding: 32px 0; font-size: 15px; color: var(--x-muted); }
+      .x-empty[hidden] { display: none; }
+
+      /* quiet line under the list */
+      .x-more { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; padding-block: 24px clamp(80px, 10vw, 112px); margin: 0; font-size: 15px; color: var(--x-muted); }
+      .x-tlink { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 600; letter-spacing: -0.01em; color: var(--x-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; text-decoration-color: var(--x-rule-strong); transition: text-decoration-color 0.3s var(--x-ease); }
+      .x-tlink:hover { text-decoration-color: var(--x-ink); }
+      .x-arrow { display: inline-block; transition: transform 0.3s var(--x-ease); }
+      .x-tlink:hover .x-arrow, .x-join:hover .x-arrow { transform: translateX(3px); }
+
+      /* footer: teal band, as on the main site */
+      .x-foot { background: var(--x-teal); color: #ECEBE7; padding: clamp(72px, 10vw, 120px) 0 40px; text-align: center; }
+      .x-foot .x-wrap { max-width: 1240px; padding-inline: clamp(20px, 4vw, 48px); }
+      .x-foot :focus-visible { outline-color: #ECEBE7; }
+      .x-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; padding-block: 20px; border-block: 1px solid rgba(236, 235, 231, 0.2); margin-bottom: 28px; }
+      .x-foot nav a { text-decoration: none; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; opacity: 0.85; }
+      .x-foot nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot nav span { display: inline-flex; align-items: center; opacity: 0.4; }
+      .x-foot p { margin: 0; opacity: 0.8; }
+      .x-foot p + p { margin-top: 10px; opacity: 0.6; }
+      .x-foot a.x-mail { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+
+      /* motion */
+      @keyframes x-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+      .x-in { animation: x-fade 600ms var(--x-ease) both; animation-delay: calc(var(--i, 0) * 90ms + 80ms); }
+      html { scroll-padding-top: 64px; }
+
+      @media (max-width: 760px) {
+        .x-post a { grid-template-columns: minmax(0, 1fr); row-gap: 8px; padding: 28px 0; }
+        .x-post__t { font-size: 24px; }
+        .x-post__meta { text-align: left; order: 3; }
+      }
+      @media (max-width: 560px) {
+        .x-mast__links { gap: 14px; }
+      }
+      @media (max-width: 480px) {
+        .x-mast__links a:not(.x-join) { display: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-page" id="top">
+      <header class="x-mast">
+        <div class="x-wrap x-mast__in">
+          <a class="x-brand" href="/" aria-label="The Mētis Club, home"><img src="knight.svg" alt="" /><span>The Mētis Club</span></a>
+          <nav class="x-mast__links x-label" aria-label="Main">
+            <a href="/workshop">Workshop</a>
+            <a href="/journal" aria-current="page">Journal</a>
+            <a class="x-join" href="/#join">Save my seat <span class="x-arrow" aria-hidden="true">→</span></a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="x-wrap x-jhead" aria-labelledby="x-title">
+          <p class="x-caps x-eyebrow x-in" style="--i: 0">Journal</p>
+          <h1 class="x-h1 x-in" id="x-title" style="--i: 1">Notes on outreach that <em>books calls.</em></h1>
+          <p class="x-lede x-in" style="--i: 2">Field notes from running outreach at Reblues Media: what worked, what burned, and the systems behind it.</p>
+        </section>
+
+        <section class="x-wrap x-in" style="--i: 3" aria-label="Posts">
+          <ul class="x-filter" aria-label="Filter posts by topic">
+            <li><button type="button" data-filter="all" aria-pressed="true">All</button></li>
+            <li><button type="button" data-filter="linkedin" aria-pressed="false">LinkedIn</button></li>
+            <li><button type="button" data-filter="messaging" aria-pressed="false">Messaging</button></li>
+            <li><button type="button" data-filter="follow-up" aria-pressed="false">Follow-up</button></li>
+            <li><button type="button" data-filter="systems" aria-pressed="false">Systems</button></li>
+          </ul>
+
+          <ol class="x-posts" id="x-posts" reversed>
+            <!-- POST ROW: duplicate to add a post -->
+            <li class="x-post" data-tag="linkedin">
+              <a href="/journal/cold-email-to-linkedin">
+                <p class="x-caps x-post__date"><time datetime="2026-10-23">23 Oct 2026</time></p>
+                <div>
+                  <h2 class="x-post__t">From 10% to 60%: why we moved our outreach from cold email to LinkedIn</h2>
+                  <p class="x-post__ex">What changed when Reblues Media stopped fighting spam filters and went where buyers actually read.</p>
+                </div>
+                <p class="x-caps x-post__meta"><span>LinkedIn</span><span>5 min read</span></p>
+              </a>
+            </li>
+            <!-- /POST ROW -->
+          </ol>
+          <p class="x-empty" id="x-empty" hidden>No notes on this topic yet. New ones land every week.</p>
+
+          <p class="x-more">More notes every week. Get them first in the WhatsApp community. <a class="x-tlink" href="/workshop">Join the free workshop <span class="x-arrow" aria-hidden="true">→</span></a></p>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <nav class="x-label" aria-label="Site and policies">
+            <a href="/about">About</a><span aria-hidden="true">·</span>
+            <a href="/pricing">Pricing</a><span aria-hidden="true">·</span>
+            <a href="/refund">Refund Policy</a><span aria-hidden="true">·</span>
+            <a href="/shipping">Shipping &amp; Delivery</a><span aria-hidden="true">·</span>
+            <a href="/terms">Terms &amp; Conditions</a><span aria-hidden="true">·</span>
+            <a href="/privacy">Privacy Policy</a><span aria-hidden="true">·</span>
+            <a href="/contact">Contact</a>
+          </nav>
+          <p class="x-label"><a class="x-mail" href="mailto:themetisclub@gmail.com">themetisclub@gmail.com</a> · Mumbai, India</p>
+          <p class="x-label">© 2026 The Mētis Club</p>
+        </div>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        var buttons = document.querySelectorAll(".x-filter button");
+        var empty = document.getElementById("x-empty");
+        buttons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var f = btn.getAttribute("data-filter");
+            buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+            var shown = 0;
+            document.querySelectorAll("#x-posts .x-post").forEach(function (row) {
+              var match = f === "all" || (row.getAttribute("data-tag") || "").split(" ").indexOf(f) !== -1;
+              row.hidden = !match;
+              if (match) shown++;
+            });
+            empty.hidden = shown > 0;
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
