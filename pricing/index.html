@@ -147,7 +147,7 @@
                   <li>Digital PDF</li><li>Lifetime access</li><li>Delivered by email</li>
                 </ul>
               </div>
-              <p class="x-price"><span class="x-price__fig">₹999</span><span class="x-caps">one-time</span></p>
+              <p class="x-price"><span class="x-price__fig" data-inr="₹999" data-usd="$20">₹999</span><span class="x-caps">one-time</span></p>
             </li>
             <li class="x-offer">
               <span class="x-offer__n" aria-hidden="true">03</span>
@@ -162,7 +162,7 @@
             </li>
           </ol>
 
-          <p class="x-note">All prices are in INR. Digital products are delivered by email. Consulting sessions are scheduled by email after payment. See our <a href="/refund">Refund Policy</a> and <a href="/terms">Terms &amp; Conditions</a>.</p>
+          <p class="x-note"><span data-inr="All prices are in INR." data-usd="Playbook price shown in USD for buyers outside India (₹999 in India). Consulting is billed in INR.">All prices are in INR.</span> Digital products are delivered by email. Consulting sessions are scheduled by email after payment. See our <a href="/refund">Refund Policy</a> and <a href="/terms">Terms &amp; Conditions</a>.</p>
         </section>
       </main>
 
@@ -181,6 +181,18 @@
         </div>
       </footer>
     </div>
+    <script>
+      (function () {
+        var tz = '';
+        try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+        var india = /^Asia\/(Kolkata|Calcutta)$/.test(tz);
+        var q = new URLSearchParams(location.search).get('cur');
+        if (q === 'usd') india = false; if (q === 'inr') india = true;
+        document.documentElement.setAttribute('data-cur', india ? 'inr' : 'usd');
+        if (india) return;
+        document.querySelectorAll('[data-usd]').forEach(function (el) { el.textContent = el.getAttribute('data-usd'); });
+      })();
+    </script>
     <script src="hark.js"></script>
   </body>
 </html>
