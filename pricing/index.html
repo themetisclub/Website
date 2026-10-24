@@ -187,6 +187,8 @@
     </div>
     <script>
       (function () {
+        var qs = new URLSearchParams(location.search);
+        if (qs.get('test') === '1') { document.querySelectorAll('[data-usd-href]').forEach(function (el) { el.href = (qs.get('cur') === 'usd' ? 'https://rzp.io/rzp/GjfO0Pa' : 'https://rzp.io/rzp/u6bco0Y'); el.setAttribute('data-usd-href', 'https://rzp.io/rzp/GjfO0Pa'); }); }
         var tz = '';
         try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
         var india = /^Asia\/(Kolkata|Calcutta)$/.test(tz);
