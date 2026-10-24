@@ -820,7 +820,9 @@
               <a class="x-btn" href="https://rzp.io/rzp/linkedin-playbook-india" data-usd-href="https://rzp.io/rzp/linkedin-playbook-intl" id="x-pb-buy" target="_blank" rel="noopener">Get the playbook <span class="x-arrow" aria-hidden="true">→</span></a>
               <script>
                 (function () {
-                  var tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+                  var qs = new URLSearchParams(location.search);
+        if (qs.get('test') === '1') { document.querySelectorAll('[data-usd-href]').forEach(function (el) { el.href = (qs.get('cur') === 'usd' ? 'https://rzp.io/rzp/GjfO0Pa' : 'https://rzp.io/rzp/u6bco0Y'); el.setAttribute('data-usd-href', 'https://rzp.io/rzp/GjfO0Pa'); }); }
+        var tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
                   var india = /^Asia\/(Kolkata|Calcutta)$/.test(tz);
                   var q = new URLSearchParams(location.search).get('cur'); if (q === 'usd') india = false; if (q === 'inr') india = true;
                   if (india) return;
