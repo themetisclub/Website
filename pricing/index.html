@@ -82,6 +82,10 @@
       .x-inc { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0; padding: 0; list-style: none; }
       .x-inc li + li::before { content: "·"; padding: 0 10px; opacity: 0.6; }
       .x-price { text-align: right; white-space: nowrap; }
+      .x-buy { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; height: 40px; padding: 0 18px; border-radius: 999px; background: var(--x-ink); color: #ECEBE7; font-family: var(--x-sans); font-size: 13px; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; white-space: nowrap; transition: opacity .3s var(--x-ease); }
+      .x-buy:hover { opacity: .85; }
+      .x-price .x-buy { float: none; }
+
       .x-price__fig { display: block; font-family: var(--x-sans); font-weight: 500; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.04em; color: var(--x-ink); font-variant-numeric: lining-nums tabular-nums; }
       .x-price .x-caps { display: block; margin-top: 8px; }
       .x-note { max-width: 64ch; margin: 32px 0 0; font-size: 14px; line-height: 1.6; color: var(--x-muted); }
@@ -124,7 +128,7 @@
         <section class="x-wrap x-pricing" aria-labelledby="pricing-h">
           <p class="x-caps">The Mētis Club</p>
           <h1 class="x-h1" id="pricing-h">Pricing</h1>
-          <p class="x-lede">Simple, one-time prices in Indian Rupees. Payments are processed securely by Razorpay.</p>
+          <p class="x-lede">Simple, one-time prices. Payments are processed securely by Razorpay.</p>
 
           <ol class="x-offers">
             <li class="x-offer">
@@ -136,7 +140,7 @@
                   <li>Live session</li><li>Q&amp;A</li><li>Invite via WhatsApp community</li>
                 </ul>
               </div>
-              <p class="x-price"><span class="x-price__fig">Free</span></p>
+              <p class="x-price"><span class="x-price__fig">Free</span><br /><a class="x-buy" href="https://luma.com/22aj9mli" target="_blank" rel="noopener">Register free →</a></p>
             </li>
             <li class="x-offer">
               <span class="x-offer__n" aria-hidden="true">02</span>
@@ -147,7 +151,7 @@
                   <li>Digital PDF</li><li>Lifetime access</li><li>Delivered by email</li>
                 </ul>
               </div>
-              <p class="x-price"><span class="x-price__fig" data-inr="₹999" data-usd="$20">₹999</span><span class="x-caps">one-time</span></p>
+              <p class="x-price"><span class="x-price__fig" data-inr="₹999" data-usd="$20">₹999</span><span class="x-caps">one-time</span><a class="x-buy" href="https://rzp.io/rzp/linkedin-playbook-india" data-inr-href="https://rzp.io/rzp/linkedin-playbook-india" data-usd-href="https://rzp.io/rzp/linkedin-playbook-intl" target="_blank" rel="noopener">Buy the playbook →</a></p>
             </li>
             <li class="x-offer">
               <span class="x-offer__n" aria-hidden="true">03</span>
@@ -158,7 +162,7 @@
                   <li>60-minute video call</li><li>Personalised recommendations</li><li>Session notes by email</li>
                 </ul>
               </div>
-              <p class="x-price"><span class="x-price__fig">₹4,499</span><span class="x-caps">per 1-hour session</span></p>
+              <p class="x-price"><span class="x-price__fig">₹4,499</span><span class="x-caps">per 1-hour session</span><a class="x-buy" href="https://rzp.io/rzp/1-1-outreach-consulting" target="_blank" rel="noopener">Book a session →</a></p>
             </li>
           </ol>
 
@@ -191,6 +195,7 @@
         document.documentElement.setAttribute('data-cur', india ? 'inr' : 'usd');
         if (india) return;
         document.querySelectorAll('[data-usd]').forEach(function (el) { el.textContent = el.getAttribute('data-usd'); });
+        document.querySelectorAll('[data-usd-href]').forEach(function (el) { el.href = el.getAttribute('data-usd-href'); });
       })();
     </script>
     <script src="hark.js"></script>
