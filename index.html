@@ -816,8 +816,18 @@
                 <li><span class="x-index__name">Rook</span><span class="x-index__cap">Follow-ups &amp; outreach infrastructure</span></li>
                 <li><span class="x-index__name">Queen</span><span class="x-index__cap">Measurement &amp; scaling to 10+ calls a week</span></li>
               </ol>
-              <p class="x-pb__note">Launching soon. Waitlist gets first access.</p>
-              <a class="x-btn" href="#join" id="x-pb-join">Join the waitlist <span class="x-arrow" aria-hidden="true">→</span></a>
+              <p class="x-pb__note">Digital PDF, delivered to your inbox within 24 hours. <span data-inr="₹999 one-time." data-usd="$20 one-time.">₹999 one-time.</span></p>
+              <a class="x-btn" href="https://rzp.io/rzp/linkedin-playbook-india" data-usd-href="https://rzp.io/rzp/linkedin-playbook-intl" id="x-pb-buy" target="_blank" rel="noopener">Get the playbook <span class="x-arrow" aria-hidden="true">→</span></a>
+              <script>
+                (function () {
+                  var tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+                  var india = /^Asia\/(Kolkata|Calcutta)$/.test(tz);
+                  var q = new URLSearchParams(location.search).get('cur'); if (q === 'usd') india = false; if (q === 'inr') india = true;
+                  if (india) return;
+                  document.querySelectorAll('#playbook [data-usd]').forEach(function (el) { el.textContent = el.getAttribute('data-usd'); });
+                  document.querySelectorAll('#playbook [data-usd-href]').forEach(function (el) { el.href = el.getAttribute('data-usd-href'); });
+                })();
+              </script>
             </div>
           </div>
         </section>
